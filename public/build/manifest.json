@@ -1,0 +1,84 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app-22752a76.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/scss/fonts/fonts/Geometria-Bold.woff": {
+    "file": "assets/Geometria-Bold-56fb21dc.woff",
+    "src": "resources/scss/fonts/fonts/Geometria-Bold.woff"
+  },
+  "resources/scss/fonts/fonts/Geometria-Bold.woff2": {
+    "file": "assets/Geometria-Bold-fec9625b.woff2",
+    "src": "resources/scss/fonts/fonts/Geometria-Bold.woff2"
+  },
+  "resources/scss/fonts/fonts/Geometria-LightItalic.woff": {
+    "file": "assets/Geometria-LightItalic-e69adb7f.woff",
+    "src": "resources/scss/fonts/fonts/Geometria-LightItalic.woff"
+  },
+  "resources/scss/fonts/fonts/Geometria-LightItalic.woff2": {
+    "file": "assets/Geometria-LightItalic-4d92abfe.woff2",
+    "src": "resources/scss/fonts/fonts/Geometria-LightItalic.woff2"
+  },
+  "resources/scss/fonts/fonts/Geometria-Medium.woff": {
+    "file": "assets/Geometria-Medium-27d5cc07.woff",
+    "src": "resources/scss/fonts/fonts/Geometria-Medium.woff"
+  },
+  "resources/scss/fonts/fonts/Geometria-Medium.woff2": {
+    "file": "assets/Geometria-Medium-2ae9f465.woff2",
+    "src": "resources/scss/fonts/fonts/Geometria-Medium.woff2"
+  },
+  "resources/scss/fonts/fonts/Geometria.woff": {
+    "file": "assets/Geometria-02c72463.woff",
+    "src": "resources/scss/fonts/fonts/Geometria.woff"
+  },
+  "resources/scss/fonts/fonts/Geometria.woff2": {
+    "file": "assets/Geometria-ea43b8ba.woff2",
+    "src": "resources/scss/fonts/fonts/Geometria.woff2"
+  },
+  "resources/scss/fonts/fonts/Jost-Bold.woff": {
+    "file": "assets/Jost-Bold-a09789c2.woff",
+    "src": "resources/scss/fonts/fonts/Jost-Bold.woff"
+  },
+  "resources/scss/fonts/fonts/Jost-Bold.woff2": {
+    "file": "assets/Jost-Bold-9f8112a7.woff2",
+    "src": "resources/scss/fonts/fonts/Jost-Bold.woff2"
+  },
+  "resources/scss/fonts/fonts/Jost-ExtraBold.woff": {
+    "file": "assets/Jost-ExtraBold-e852c181.woff",
+    "src": "resources/scss/fonts/fonts/Jost-ExtraBold.woff"
+  },
+  "resources/scss/fonts/fonts/Jost-ExtraBold.woff2": {
+    "file": "assets/Jost-ExtraBold-8841ba8f.woff2",
+    "src": "resources/scss/fonts/fonts/Jost-ExtraBold.woff2"
+  },
+  "resources/scss/fonts/fonts/Jost-Medium.woff": {
+    "file": "assets/Jost-Medium-31a6f555.woff",
+    "src": "resources/scss/fonts/fonts/Jost-Medium.woff"
+  },
+  "resources/scss/fonts/fonts/Jost-Medium.woff2": {
+    "file": "assets/Jost-Medium-8d58c280.woff2",
+    "src": "resources/scss/fonts/fonts/Jost-Medium.woff2"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.eot": {
+    "file": "assets/icomoon-0806e009.eot",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.eot"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.svg": {
+    "file": "assets/icomoon-2cfd71f0.svg",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.svg"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.ttf": {
+    "file": "assets/icomoon-ff4622f5.ttf",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.ttf"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.woff": {
+    "file": "assets/icomoon-7ba2a511.woff",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
+  },
+  "resources/scss/style.scss": {
+    "file": "assets/style-5978a4d7.css",
+    "isEntry": true,
+    "src": "resources/scss/style.scss"
+  }
+}
