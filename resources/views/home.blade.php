@@ -8,7 +8,7 @@
 
 @section('content')
 
-<div class="test">@lang('home.test')</div>
+<div class="test__container">@lang('home.test')</div>
 <br><br>
 <div class="langs">
   <div class="lang">

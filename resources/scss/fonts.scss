@@ -1,56 +1,56 @@
 @font-face {
-  font-family: Geometria;
+  font-family: Roboto;
   font-display: swap;
-  src: url("./fonts/fonts/Geometria.woff2") format("woff2"), url("./fonts/fonts/Geometria.woff") format("woff");
+  src: url("./fonts/fonts/Roboto-Bold.woff2") format("woff2"), url("./fonts/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("./fonts/fonts/Roboto-Medium.woff2") format("woff2"), url("./fonts/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("./fonts/fonts/Roboto-Regular.woff2") format("woff2"), url("./fonts/fonts/Roboto-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Geometria;
+  font-family: RobotoSlab;
   font-display: swap;
-  src: url("./fonts/fonts/Geometria-Bold.woff2") format("woff2"), url("./fonts/fonts/Geometria-Bold.woff") format("woff");
+  src: url("./fonts/fonts/RobotoSlab-Bold.woff2") format("woff2"), url("./fonts/fonts/RobotoSlab-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Geometria;
+  font-family: RobotoSlab;
   font-display: swap;
-  src: url("./fonts/fonts/Geometria-LightItalic.woff2") format("woff2"), url("./fonts/fonts/Geometria-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Geometria;
-  font-display: swap;
-  src: url("./fonts/fonts/Geometria-Medium.woff2") format("woff2"), url("./fonts/fonts/Geometria-Medium.woff") format("woff");
+  src: url("./fonts/fonts/RobotoSlab-Medium.woff2") format("woff2"), url("./fonts/fonts/RobotoSlab-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Jost;
+  font-family: RobotoSlab;
   font-display: swap;
-  src: url("./fonts/fonts/Jost-Bold.woff2") format("woff2"), url("./fonts/fonts/Jost-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("./fonts/fonts/RobotoSlab-Regular.woff2") format("woff2"), url("./fonts/fonts/RobotoSlab-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Jost;
+  font-family: RobotoSlab;
   font-display: swap;
-  src: url("./fonts/fonts/Jost-Medium.woff2") format("woff2"), url("./fonts/fonts/Jost-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Jost;
-  font-display: swap;
-  src: url("./fonts/fonts/Jost-ExtraBold.woff2") format("woff2"), url("./fonts/fonts/Jost-ExtraBold.woff") format("woff");
-  font-weight: 800;
+  src: url("./fonts/fonts/RobotoSlab-SemiBold.woff2") format("woff2"), url("./fonts/fonts/RobotoSlab-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 

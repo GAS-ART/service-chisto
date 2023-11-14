@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="@lang('lang.prefix')">
+<html lang="@lang('lang.current')">
 @include('inc.head')
 
 <body id="body">

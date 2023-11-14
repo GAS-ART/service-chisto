@@ -5,7 +5,8 @@ return [
    'ru'=>'ru',
    'current'=>'ru',
    'another'=>'ua',
-   'prefix' => 'ru',
+   'ua_name' => 'Соловьиная',
+   'ru_name' => 'другая',
 ]
 
 ?>

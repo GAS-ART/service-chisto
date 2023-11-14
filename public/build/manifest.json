@@ -1,64 +1,64 @@
 {
   "resources/js/app.js": {
-    "file": "assets/app-22752a76.js",
+    "file": "assets/app-e4470fa5.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/scss/fonts/fonts/Geometria-Bold.woff": {
-    "file": "assets/Geometria-Bold-56fb21dc.woff",
-    "src": "resources/scss/fonts/fonts/Geometria-Bold.woff"
+  "resources/scss/fonts/fonts/Roboto-Bold.woff": {
+    "file": "assets/Roboto-Bold-dd8ec6f5.woff",
+    "src": "resources/scss/fonts/fonts/Roboto-Bold.woff"
   },
-  "resources/scss/fonts/fonts/Geometria-Bold.woff2": {
-    "file": "assets/Geometria-Bold-fec9625b.woff2",
-    "src": "resources/scss/fonts/fonts/Geometria-Bold.woff2"
+  "resources/scss/fonts/fonts/Roboto-Bold.woff2": {
+    "file": "assets/Roboto-Bold-27d490b0.woff2",
+    "src": "resources/scss/fonts/fonts/Roboto-Bold.woff2"
   },
-  "resources/scss/fonts/fonts/Geometria-LightItalic.woff": {
-    "file": "assets/Geometria-LightItalic-e69adb7f.woff",
-    "src": "resources/scss/fonts/fonts/Geometria-LightItalic.woff"
+  "resources/scss/fonts/fonts/Roboto-Medium.woff": {
+    "file": "assets/Roboto-Medium-70a6610b.woff",
+    "src": "resources/scss/fonts/fonts/Roboto-Medium.woff"
   },
-  "resources/scss/fonts/fonts/Geometria-LightItalic.woff2": {
-    "file": "assets/Geometria-LightItalic-4d92abfe.woff2",
-    "src": "resources/scss/fonts/fonts/Geometria-LightItalic.woff2"
+  "resources/scss/fonts/fonts/Roboto-Medium.woff2": {
+    "file": "assets/Roboto-Medium-fd085584.woff2",
+    "src": "resources/scss/fonts/fonts/Roboto-Medium.woff2"
   },
-  "resources/scss/fonts/fonts/Geometria-Medium.woff": {
-    "file": "assets/Geometria-Medium-27d5cc07.woff",
-    "src": "resources/scss/fonts/fonts/Geometria-Medium.woff"
+  "resources/scss/fonts/fonts/Roboto-Regular.woff": {
+    "file": "assets/Roboto-Regular-83580cc1.woff",
+    "src": "resources/scss/fonts/fonts/Roboto-Regular.woff"
   },
-  "resources/scss/fonts/fonts/Geometria-Medium.woff2": {
-    "file": "assets/Geometria-Medium-2ae9f465.woff2",
-    "src": "resources/scss/fonts/fonts/Geometria-Medium.woff2"
+  "resources/scss/fonts/fonts/Roboto-Regular.woff2": {
+    "file": "assets/Roboto-Regular-1d28e229.woff2",
+    "src": "resources/scss/fonts/fonts/Roboto-Regular.woff2"
   },
-  "resources/scss/fonts/fonts/Geometria.woff": {
-    "file": "assets/Geometria-02c72463.woff",
-    "src": "resources/scss/fonts/fonts/Geometria.woff"
+  "resources/scss/fonts/fonts/RobotoSlab-Bold.woff": {
+    "file": "assets/RobotoSlab-Bold-af21beda.woff",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Bold.woff"
   },
-  "resources/scss/fonts/fonts/Geometria.woff2": {
-    "file": "assets/Geometria-ea43b8ba.woff2",
-    "src": "resources/scss/fonts/fonts/Geometria.woff2"
+  "resources/scss/fonts/fonts/RobotoSlab-Bold.woff2": {
+    "file": "assets/RobotoSlab-Bold-ea760f26.woff2",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Bold.woff2"
   },
-  "resources/scss/fonts/fonts/Jost-Bold.woff": {
-    "file": "assets/Jost-Bold-a09789c2.woff",
-    "src": "resources/scss/fonts/fonts/Jost-Bold.woff"
+  "resources/scss/fonts/fonts/RobotoSlab-Medium.woff": {
+    "file": "assets/RobotoSlab-Medium-bb593389.woff",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Medium.woff"
   },
-  "resources/scss/fonts/fonts/Jost-Bold.woff2": {
-    "file": "assets/Jost-Bold-9f8112a7.woff2",
-    "src": "resources/scss/fonts/fonts/Jost-Bold.woff2"
+  "resources/scss/fonts/fonts/RobotoSlab-Medium.woff2": {
+    "file": "assets/RobotoSlab-Medium-f35a948d.woff2",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Medium.woff2"
   },
-  "resources/scss/fonts/fonts/Jost-ExtraBold.woff": {
-    "file": "assets/Jost-ExtraBold-e852c181.woff",
-    "src": "resources/scss/fonts/fonts/Jost-ExtraBold.woff"
+  "resources/scss/fonts/fonts/RobotoSlab-Regular.woff": {
+    "file": "assets/RobotoSlab-Regular-60d45e86.woff",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Regular.woff"
   },
-  "resources/scss/fonts/fonts/Jost-ExtraBold.woff2": {
-    "file": "assets/Jost-ExtraBold-8841ba8f.woff2",
-    "src": "resources/scss/fonts/fonts/Jost-ExtraBold.woff2"
+  "resources/scss/fonts/fonts/RobotoSlab-Regular.woff2": {
+    "file": "assets/RobotoSlab-Regular-c45e2667.woff2",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-Regular.woff2"
   },
-  "resources/scss/fonts/fonts/Jost-Medium.woff": {
-    "file": "assets/Jost-Medium-31a6f555.woff",
-    "src": "resources/scss/fonts/fonts/Jost-Medium.woff"
+  "resources/scss/fonts/fonts/RobotoSlab-SemiBold.woff": {
+    "file": "assets/RobotoSlab-SemiBold-2c36a51c.woff",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-SemiBold.woff"
   },
-  "resources/scss/fonts/fonts/Jost-Medium.woff2": {
-    "file": "assets/Jost-Medium-8d58c280.woff2",
-    "src": "resources/scss/fonts/fonts/Jost-Medium.woff2"
+  "resources/scss/fonts/fonts/RobotoSlab-SemiBold.woff2": {
+    "file": "assets/RobotoSlab-SemiBold-080900e3.woff2",
+    "src": "resources/scss/fonts/fonts/RobotoSlab-SemiBold.woff2"
   },
   "resources/scss/fonts/icon-fonts/icomoon.eot": {
     "file": "assets/icomoon-0806e009.eot",
@@ -77,7 +77,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-5978a4d7.css",
+    "file": "assets/style-47007cc8.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
