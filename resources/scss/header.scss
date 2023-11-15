@@ -82,6 +82,21 @@
 
 .header-top-logo{
   display: none;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 46px;
+    height: 20px;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+  img{
+    position: relative;
+    z-index: 2;
+  }
   @media (max-width: $tablet) {
     display: block;
   }

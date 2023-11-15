@@ -7,6 +7,7 @@ return [
    'email_link' => 'dnepr.jc@gmail.com',
    'instagram' => 'https://www.instagram.com/klining.ua/',
    'telegram' => 'Alexklining',
+   'contact' => 'Днепр',
 ]
 
 ?>
