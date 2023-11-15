@@ -10,3 +10,31 @@ if(burgerIcon && burger){
     burger.classList.toggle('active');
   });
 }
+
+const topMenuBtn = document.querySelector('.top-menu-btn');
+const headerBottomMenu = document.querySelector('.header__bottom-menu');
+const header = document.querySelector('.header');
+if(topMenuBtn && headerBottomMenu){
+  topMenuBtn.addEventListener('click', () => {
+    headerBottomMenu.classList.add('active');
+    header.classList.add('save-top')
+  });
+  document.addEventListener('scroll', (e)=> {
+    if (window.scrollY > 100) {
+      topMenuBtn.classList.add('active');
+    } else {
+      topMenuBtn.classList.remove('active');
+    }
+    if(headerBottomMenu.classList.contains('active')){
+      headerBottomMenu.classList.add('hide');
+      setTimeout(()=> {
+        headerBottomMenu.classList.remove('hide');
+        headerBottomMenu.classList.remove('active');
+        header.classList.remove('save-top');
+      }, 300);
+    }
+  });
+}
+
+
+

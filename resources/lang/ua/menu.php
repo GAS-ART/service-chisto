@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'main' => 'головна',
+  'main' => 'Головна',
   'dry_cleaning' => [
     'title' => 'Хімчистка',
     'furniture' => 'Хімчистка меблів',

@@ -1,6 +1,9 @@
 .header {
   position: relative;
   z-index: 100;
+  &.save-top{
+    margin-top: 110px;
+  }
 
   &__wrapper {
   }
@@ -10,6 +13,11 @@
     padding: 10px 0;
     position: relative;
     z-index: 10;
+    margin-bottom: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   &__container {
@@ -23,13 +31,32 @@
   }
 
   &__menu {
+    @media (max-width: $tablet) {
+      display: none;
+    } 
   }
 
   &__menu-bottom {
     display: flex;
+    align-items: center;
   }
 
-  &__hide-menu {
+  &__bottom-menu {
+    margin-top: 44px;
+    transition: top 0.3s ease 0s;
+    top: 0;
+    &.active{
+      position: fixed;
+      top: 44px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      margin-top: 0;
+      //transition: top 2s ease 0s;
+    }
+    &.hide{
+      top: -30px;
+    } 
   }
 
   &__menu-logo {
@@ -52,7 +79,7 @@
 
 .header-top-logo{
   display: none;
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: block;
   }
 }
@@ -116,6 +143,9 @@
   }
 }
 .social-header {
+  @media (max-width: $tablet) {
+    flex: 1 1 auto;
+  }
   @media (max-width: $mobile) {
     display: none;
   }
@@ -167,9 +197,18 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  p{
+  .top-menu-btn{
     color: #ffffff;
     transition: all 0.3s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+  }
     @media (pointer: fine) {
       &:hover {
         color: $lightPink;
@@ -177,7 +216,7 @@
     }
     cursor: pointer;
   }
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: none;
   }
 }
@@ -224,6 +263,7 @@
 
   &__list {
     display: flex;
+    align-items: center;
   }
 
   &__item {
@@ -231,8 +271,9 @@
     color: #2c2c2c;
     &:not(:last-child){
       margin-right: 30px;
+      @include adaptiveValueREM('margin-right', 30, 10, $maxWidthContainer, 992, 1);
     }
-    &::before{
+    h3::before{
       content: '';
       position: absolute;
       top: 100%;
@@ -240,39 +281,52 @@
       width: 0;
       height: 2px;
       background-color: $darkPink;
-      transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0.2s;
+    }
+    &:last-child{
+      padding: 10px;
+      border: 1px solid ;
+      cursor: pointer;
+      border-color: #E2E8E4;
+      transition: border-color 0.3s ease 0s;
+      &:hover{
+        border-color: $darkPink;
+      }
     }
     &::after{
       content: '';
       position: absolute;
-      top: calc(100% + 3px);
+      top: 100%;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 7px;
     }
     &:hover{
       color: $darkPink;
-      &::before{
+      h3::before{
         width: 100%;
       }
       .menu-header__sub-list{
-        top: 20px;
+        top: 120%;
         opacity: 1;
         visibility: visible;
         pointer-events: all;
       }
     }
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
   }
 
   &__list-link {
-    font-family: Roboto-Slab;
+    //font-family: Roboto-Slab;
     font-size: 16px;
   }
 
   &__sub-list {
     transition: all 0.3s ease 0s;
     position: absolute;
-    top: 40px;
+    top: 200%;
     left: 0;
     //width: 160px;
     //border: 2px solid $lightPink;
@@ -280,12 +334,18 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    background-color: #ffffff;
+    min-width: 100%;
   }
 
   &__sub-item {
     color: #1D1D1D;
+    transition: all 0.3s ease 0s;
     &:not(:last-child){
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    &:hover{
+      color: #B9766F;
     }
   }
 
@@ -322,7 +382,7 @@
   height: 14px;
   cursor: pointer;
   display: none;
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: block;
   }
   &:before {
@@ -414,7 +474,7 @@
   &.active{
     transform: translateX(0vw);
   }
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: block;
     text-align: center;
   }
