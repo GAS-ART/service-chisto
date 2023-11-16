@@ -56,7 +56,7 @@
                      </svg>
                   </a>
                </div>
-               <div class="header-contacts__body top-menu"><button class="top-menu-btn" type="button">@lang('home.top_menu_btn')</button></div>
+               <div class="header-contacts__body top-menu"><button class="top-menu-btn" type="button">@lang('menu.top_menu_btn')</button></div>
                <div class="header-contacts__body lang-header @lang('lang.current')">
                   <a class="language-btn__link @lang('lang.ua')" href="{{ route('locale', __('lang.ua')) }}">@lang('lang.ua_name')</a>
                   <a class="language-btn__link @lang('lang.ru')" href="{{ route('locale', __('lang.ru')) }}">@lang('lang.ru_name')</a>

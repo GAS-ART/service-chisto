@@ -1,0 +1,199 @@
+.banner {
+  position: relative;
+  img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+
+  .sofa, .brush, .vacun-cleaner, .window, .polisher, .mop, .garbage {
+    position: absolute;
+  }
+
+  .sofa, .brush, .vacun-cleaner, .mop, .garbage {
+    svg{
+      @include adaptiveValueREM('width', 178, 128, 1440, 768, 1);
+      @include adaptiveValueREM('height', 125, 75, 1440, 768, 1);
+      @media (max-width: $mobile) {
+        @include adaptiveValueREM('width', 128, 118, 768, 480, 1);
+        @include adaptiveValueREM('height', 75, 65, 768, 480, 1);
+      }
+    }
+  }
+
+  .sofa {
+    top: 43%;
+    left: 15%;
+    svg{
+      @include adaptiveValueREM('width', 208, 128, 1440, 768, 1);
+      @include adaptiveValueREM('height', 155, 75, 1440, 768, 1);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValueREM('top', 130, 75, 767, 480, 1);
+      @include adaptiveValueREM('left', 92, 45, 767, 480, 1);
+    }
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+  }
+
+  .brush {
+    top: 65%;
+    left: 32%;
+    @media (max-width: $tablet) {
+      left: 23%;
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValueREM('top', 226, 120, 767, 480, 1);
+      @include adaptiveValueREM('left', 176, 108, 767, 480, 1);
+    }
+    @media (max-width: em(699)) {
+      display: none;
+    }
+  }
+
+  .vacun-cleaner {
+    top: 57%;
+    left: 50%;
+    @media (max-width: $mobile) {
+      top: 57%;
+      left: 50%;
+      @include adaptiveValueREM('top', 190, 80, 767, 480, 1);
+      @include adaptiveValueREM('left', 384, 215, 767, 480, 1);
+    }
+  }
+
+  .window {
+    top: 35%;
+    left: 64%;
+    @include adaptiveValueREM('top', 289, 208, 1920, 1500, 1);
+    @include adaptiveValueREM('left', 1218, 930, 1920, 1500, 1);
+    @media (max-width: em(1499)) {
+      @include adaptiveValueREM('top', 208, 150, 1499, 1100, 1);
+      @include adaptiveValueREM('left', 930, 672, 1499, 1100, 1);
+    }
+    @media (max-width: em(1099)) {
+      @include adaptiveValueREM('top', 150, 111, 1099, 768, 1);
+      @include adaptiveValueREM('left', 672, 461, 1099, 768, 1);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValueREM('top', 111, 64, 767, 480, 1);
+      @include adaptiveValueREM('left', 461, 270, 767, 480, 1);
+    }
+    svg{
+      @include adaptiveValueREM('width', 178, 108, 1440, 768, 1);
+      @include adaptiveValueREM('height', 125, 55, 1440, 768, 1);
+    }
+  }
+
+  .polisher {
+    top: 31.5%;
+    left: 73%;
+    /* @include adaptiveValueREM('top',260, 97, 1920, 768, 1);
+    @include adaptiveValueREM('left',1389, 525, 1920, 768, 1); */
+    @include adaptiveValueREM('top',260, 200, 1920, 1500, 1);
+    @include adaptiveValueREM('left',1389, 1065, 1920, 1500, 1);
+    @media (max-width: em(1499)) {
+      @include adaptiveValueREM('top', 200, 145, 1499, 1100, 1);
+      @include adaptiveValueREM('left', 1065, 780, 1499, 1100, 1);
+    }
+    @media (max-width: em(1099)) {
+      @include adaptiveValueREM('top', 145, 100, 1099, 768, 1);
+      @include adaptiveValueREM('left', 780, 530, 1099, 768, 1);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValueREM('top', 100, 50, 768, 480, 1);
+      @include adaptiveValueREM('left', 530, 325, 768, 480, 1);
+    }
+    svg{
+      @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
+      @include adaptiveValueREM('height', 125, 55, 1920, 768, 1);
+    }
+  }
+
+  .mop{
+    top: 50%;
+    left: 75%;
+    @media (max-width: $mobile) {
+      top: 45%;
+    }
+  }
+
+  .garbage{
+    top: 72%;
+    left: 64%;
+    @media (max-width: em(600)) {
+      display: none;
+    }
+  }
+  
+ 
+
+
+
+  &__body {
+    position: absolute;
+    top: 0px;
+    left: calc((100% - 1180px) / 2);
+    width: 1180px;
+    height: 100%;
+    color: #FDFDFD;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width: em(1230)) {
+      left: 15px;
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__title{
+    font-family: Roboto Slab;
+    font-size: 40px;
+    @include adaptiveValueREM('font-size', 40, 20, 1180, 360, 1);
+    font-weight: 700;
+    line-height: 140%;
+    max-width: 830px;
+    text-align: center;
+    margin-top: 30px;
+    flex: 1 1 auto;
+    @media (max-width: $tablet) {
+      margin-top: 5px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: -7px;
+    }
+  }
+
+  &__btn{
+    margin-bottom: 50px;
+    border-radius: 6px;
+    background: #006C83;
+    font-size: 18px;
+    font-weight: 500;
+   // box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 12px 25px;
+    transition: transform 0.2s ease;
+    &:active {
+      transform: scale(0.95);
+      //box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: em(1300)) {
+      margin-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      padding: 10px;
+      //font-size: 16px;
+    }
+    @media (max-width: em(600)) {
+      margin-bottom: 5px;
+    }
+  }
+
+}

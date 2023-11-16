@@ -2,6 +2,7 @@
 
 return [
   'main' => 'Главная',
+  'top_menu_btn' => 'Меню',
   'dry_cleaning' => [
     'title' => 'Химчистка',
     'furniture' => 'Химчистка мебели',
