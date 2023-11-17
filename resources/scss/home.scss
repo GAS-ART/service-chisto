@@ -22,6 +22,12 @@
         @include adaptiveValueREM('height', 75, 65, 768, 480, 1);
       }
     }
+    @media (max-width: $mobileSmall) {
+      svg{
+        width: 158px;
+        height: 105px;
+      }
+    }
   }
 
   .sofa {
@@ -53,6 +59,18 @@
     @media (max-width: em(699)) {
       display: none;
     }
+    @media (max-width: $mobileSmall) {
+      display: block;
+      svg{
+        width: 158px;
+        height: 105px;
+      }
+      @include adaptiveValueREM('top', 330, 220, 480, 360, 1);
+      @include adaptiveValueREM('left', 120, 80, 480, 360, 1);
+    }
+    @media (max-width: em(399)) {
+      display: none;
+    }
   }
 
   .vacun-cleaner {
@@ -63,6 +81,11 @@
       left: 50%;
       @include adaptiveValueREM('top', 190, 80, 767, 480, 1);
       @include adaptiveValueREM('left', 384, 215, 767, 480, 1);
+    }
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValueREM('top', 480, 310, 480, 360, 1);
+      @include adaptiveValueREM('left', 50, 20, 480, 360, 1);
+      transform: scale(-1, 1);
     }
   }
 
@@ -86,6 +109,14 @@
     svg{
       @include adaptiveValueREM('width', 178, 108, 1440, 768, 1);
       @include adaptiveValueREM('height', 125, 55, 1440, 768, 1);
+    }
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValueREM('top', 228, 150, 480, 360, 1);
+      @include adaptiveValueREM('left', 65, 30, 480, 360, 1);
+      svg{
+        width: 158px;
+        height: 105px;
+      }
     }
   }
 
@@ -112,6 +143,16 @@
       @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
       @include adaptiveValueREM('height', 125, 55, 1920, 768, 1);
     }
+    @media (max-width: $mobileSmall) {
+      @media (max-width: $mobileSmall) {
+        @include adaptiveValueREM('top', 210, 138, 480, 360, 1);
+        @include adaptiveValueREM('left', 170, 130, 480, 360, 1);
+        svg{
+          width: 138px;
+          height: 85px;
+        }
+      }
+    }
   }
 
   .mop{
@@ -119,6 +160,10 @@
     left: 75%;
     @media (max-width: $mobile) {
       top: 45%;
+    }
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValueREM('top', 380, 250, 480, 360, 1);
+      @include adaptiveValueREM('left', 250, 150, 480, 360, 1);
     }
   }
 
@@ -167,6 +212,9 @@
     @media (max-width: $mobile) {
       margin-top: -7px;
     }
+    @media (max-width: $mobileSmall) {
+      margin-top: 25px;
+    }
   }
 
   &__btn{
@@ -193,6 +241,9 @@
     }
     @media (max-width: em(600)) {
       margin-bottom: 5px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 25px;
     }
   }
 
