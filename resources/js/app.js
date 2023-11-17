@@ -44,6 +44,7 @@ if(topMenuBtn && headerBottomMenu){
 
 function SvgWidthVariable() {
   const polisherWidth = document.querySelector('.polisher svg').clientWidth;
+  console.log(polisherWidth);
   const styleTag = document.querySelector("head style");
   styleTag.innerHTML += `:root { --polisher-width: ${polisherWidth}px; }`; 
 }

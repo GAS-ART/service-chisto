@@ -151,22 +151,21 @@
     }
     @media (max-width: $mobile) {
       @include adaptiveValueREM('top', 100, 50, 768, 480, 1);
-      @include adaptiveValueREM('left', 535, 331, 768, 480, 1);
-      @include adaptiveValueREM('width',108, 65, 768, 480, 1);
+      @include adaptiveValueREM('left', 555, 343, 768, 480, 1);
+      @include adaptiveValueREM('width',108, 68, 768, 480, 1);
     }
     svg{
       @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
       @include adaptiveValueREM('height', 125, 55, 1920, 768, 1);
     }
     @media (max-width: $mobileSmall) {
-      @media (max-width: $mobileSmall) {
         @include adaptiveValueREM('top', 210, 138, 480, 360, 1);
-        @include adaptiveValueREM('left', 170, 130, 480, 360, 1);
+        @include adaptiveValueREM('left', 179, 135, 480, 360, 1);
+        @include adaptiveValueREM('width',161, 120, 480, 360, 1);
         svg{
           width: 138px;
           height: 85px;
         }
-      }
     }
   }
 
