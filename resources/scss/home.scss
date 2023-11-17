@@ -9,6 +9,10 @@
   object-fit: cover;
   }
 
+  .animate-body{
+    width: min-content;
+  }
+
   .sofa, .brush, .vacun-cleaner, .window, .polisher, .mop, .garbage {
     position: absolute;
   }
@@ -90,6 +94,7 @@
   }
 
   .window {
+    z-index: 2;
     top: 35%;
     left: 64%;
     @include adaptiveValueREM('top', 289, 208, 1920, 1500, 1);
@@ -123,21 +128,31 @@
   .polisher {
     top: 31.5%;
     left: 73%;
-    /* @include adaptiveValueREM('top',260, 97, 1920, 768, 1);
-    @include adaptiveValueREM('left',1389, 525, 1920, 768, 1); */
+    overflow: hidden;
     @include adaptiveValueREM('top',260, 200, 1920, 1500, 1);
-    @include adaptiveValueREM('left',1389, 1065, 1920, 1500, 1);
+    @include adaptiveValueREM('left',1359, 1060, 1920, 1500, 1);
+    @include adaptiveValueREM('width',270, 210, 1920, 1500, 1);
+    svg{
+      position: relative;
+      left: -100%;
+      animation: polisher 4s linear infinite normal 0s forwards;
+    }
+
     @media (max-width: em(1499)) {
       @include adaptiveValueREM('top', 200, 145, 1499, 1100, 1);
-      @include adaptiveValueREM('left', 1065, 780, 1499, 1100, 1);
+      @include adaptiveValueREM('left', 1058.5, 774, 1499, 1100, 1);
+      @include adaptiveValueREM('width',209, 152, 1499, 1100, 1);
+      
     }
     @media (max-width: em(1099)) {
       @include adaptiveValueREM('top', 145, 100, 1099, 768, 1);
-      @include adaptiveValueREM('left', 780, 530, 1099, 768, 1);
+      @include adaptiveValueREM('left', 772.5, 535, 1099, 768, 1);
+      @include adaptiveValueREM('width',152, 108, 1099, 768, 1);
     }
     @media (max-width: $mobile) {
       @include adaptiveValueREM('top', 100, 50, 768, 480, 1);
-      @include adaptiveValueREM('left', 530, 325, 768, 480, 1);
+      @include adaptiveValueREM('left', 535, 331, 768, 480, 1);
+      @include adaptiveValueREM('width',108, 65, 768, 480, 1);
     }
     svg{
       @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
@@ -154,6 +169,15 @@
       }
     }
   }
+
+  @keyframes polisher {
+     0% {
+      left: --polisher-width;
+     }
+     100%{
+      left: 100%;
+     }
+    }
 
   .mop{
     top: 50%;

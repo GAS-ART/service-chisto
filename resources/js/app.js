@@ -40,4 +40,19 @@ if(topMenuBtn && headerBottomMenu){
 }
 
 
+//Set CSS variables
+
+function SvgWidthVariable() {
+  const polisherWidth = document.querySelector('.polisher svg').clientWidth;
+  const styleTag = document.querySelector("head style");
+  styleTag.innerHTML += `:root { --polisher-width: ${polisherWidth}px; }`; 
+}
+
+SvgWidthVariable();
+
+window.addEventListener('resize', polisherWidth);
+
+/* const styleTag = document.querySelector("head style");
+styleTag.innerHTML += `:root { --scrollbar-width: ${scrollbarWidth}px; }`; */
+
 
