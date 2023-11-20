@@ -1,5 +1,6 @@
 .banner {
   position: relative;
+  overflow: hidden;
   img {
   position: relative;
   top: 0;
@@ -36,10 +37,26 @@
 
   .sofa {
     top: 43%;
-    left: 15%;
+    left: calc(15% - var(--sofa-width));
+    overflow: hidden;
+    transition: left 1.5s ease;
     svg{
+      position: relative;
+      left: var(--sofa-width);
+      transition: left 1.5s ease;
       @include adaptiveValueREM('width', 208, 128, 1440, 768, 1);
       @include adaptiveValueREM('height', 155, 75, 1440, 768, 1);
+      
+    }
+    &.visible{
+      overflow: visible;
+    }
+    &.active{
+      left: 15%;
+      svg{
+        left: 0;
+        animation: sofa 3.5s ease-in infinite normal 1.5s forwards;
+      }
     }
     @media (max-width: $mobile) {
       @include adaptiveValueREM('top', 130, 75, 767, 480, 1);
@@ -50,7 +67,91 @@
     }
   }
 
+  @keyframes sofa {
+    0% {
+      left: 0px;
+    }
+    10%{
+      left: 15px;
+    }
+    15% {
+      left: 2px
+    }
+    20%{
+      left: 8px
+    }
+    25%{
+      left: 10px
+    }
+    30%{
+      left: 20px
+    }
+    35%{
+      left: 12px
+    }
+    40%{
+      left: 17px
+    }
+    45%{
+      left: 12px
+    }
+    50%{
+      left: 3px
+    }
+    55%{
+      left: 10px
+    }
+    60%{
+      left: 16px
+    }
+    65%{
+      left: 10px
+    }
+    70%{
+      left: 5px
+    }
+    75%{
+      left: 12px
+    }
+    80%{
+      left: 18px
+    }
+    85%{
+      left: 15px
+    }
+    90%{
+      left: 9px
+    }
+    95%{
+      left: 4px
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+    }
+  }
+
   .brush {
+    top: calc(65% + var(--cleaner-icon-height));
+    overflow: hidden;
+    transition: all 0.8s ease;
+    svg{
+      position: relative;
+      z-index: 5;
+      top: var(--cleaner-icon-height);
+      transition: all 0.8s ease;
+    }
+    &.visible{
+      overflow: visible;
+    }
+    &.active{
+      top: 65%;
+      svg{
+        top: 0;
+        animation: brush 3.5s ease-in infinite normal 1s forwards;
+      }
+    }
+
     top: 65%;
     left: 32%;
     @media (max-width: $tablet) {
@@ -63,7 +164,7 @@
     @media (max-width: em(699)) {
       display: none;
     }
-    @media (max-width: $mobileSmall) {
+   /*  @media (max-width: $mobileSmall) {
       display: block;
       svg{
         width: 158px;
@@ -74,12 +175,43 @@
     }
     @media (max-width: em(399)) {
       display: none;
-    }
+    } */
   }
+
+  @keyframes brush {
+    0% {
+      top: 0px;
+      left: 0;
+    }
+    50% {
+      top: 60px;
+      left: -65px;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+    }
+  } 
 
   .vacun-cleaner {
     top: 57%;
     left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease 5s;
+    z-index: 8;
+    svg{
+      position: relative;
+      
+      animation: vacun-cleaner 2.5s ease-in infinite normal 5.8s forwards;
+      transition: transform 0.8s ease 5s;
+      transform: scale(-1, 1);
+    }
+    &.active{
+      opacity: 1;
+      svg{
+        transform: scale(1, 1);
+      }
+    }
     @media (max-width: $mobile) {
       top: 57%;
       left: 50%;
@@ -88,8 +220,29 @@
     }
     @media (max-width: $mobileSmall) {
       @include adaptiveValueREM('top', 480, 310, 480, 360, 1);
-      @include adaptiveValueREM('left', 50, 20, 480, 360, 1);
+      @include adaptiveValueREM('left', 80, 70, 480, 360, 1);
       transform: scale(-1, 1);
+    }
+  }
+
+  @keyframes vacun-cleaner {
+    0% {
+      left: 0;
+    }
+    10% {
+      left: 35px;
+    }
+    50% {
+      top: -0px;
+      left: 75px;
+    }
+    /* 75% {
+      top: -0px;
+      left: -75px;
+    } */
+    100% {
+      top: 0px;
+      left: 0px;
     }
   }
 
@@ -97,6 +250,11 @@
     z-index: 2;
     top: 35%;
     left: 64%;
+    opacity: 0;
+    transition: opacity 0.8s ease 2s;
+    &.active{
+      opacity: 1;
+    }
     @include adaptiveValueREM('top', 289, 208, 1920, 1500, 1);
     @include adaptiveValueREM('left', 1218, 930, 1920, 1500, 1);
     @media (max-width: em(1499)) {
@@ -112,8 +270,10 @@
       @include adaptiveValueREM('left', 461, 270, 767, 480, 1);
     }
     svg{
+      position: relative;
       @include adaptiveValueREM('width', 178, 108, 1440, 768, 1);
       @include adaptiveValueREM('height', 125, 55, 1440, 768, 1);
+      animation: windows 2.5s linear infinite normal 2s forwards;
     }
     @media (max-width: $mobileSmall) {
       @include adaptiveValueREM('top', 228, 150, 480, 360, 1);
@@ -122,6 +282,21 @@
         width: 158px;
         height: 105px;
       }
+    }
+  }
+
+  @keyframes windows {
+    0% {
+      top: 0px;
+      left: 0;
+    }
+    50% {
+      top: 25px;
+      left: -35px;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
     }
   }
 
@@ -170,9 +345,9 @@
   }
 
   @keyframes polisher {
-     0% {
-      left: --polisher-width;
-     }
+     /* 0% {
+      //left: --polisher-width;
+     } */
      100%{
       left: 100%;
      }
@@ -181,6 +356,13 @@
   .mop{
     top: 50%;
     left: 75%;
+    //opacity: 0;
+    transition: all 0.8s ease 3.5s;
+    transform: scale(0);
+    &.active{
+      opacity: 1;
+      transform: scale(1);
+    }
     @media (max-width: $mobile) {
       top: 45%;
     }
@@ -188,17 +370,85 @@
       @include adaptiveValueREM('top', 380, 250, 480, 360, 1);
       @include adaptiveValueREM('left', 250, 150, 480, 360, 1);
     }
+    svg{
+      position: relative;
+      animation: mop 2.5s ease-in infinite normal 4.5s forwards;
+    }
+  }
+
+  @keyframes mop {
+    0% {
+      top: 0px;
+      left: 0;
+    }
+    25% {
+      top: 15px;
+      left: -35px;
+    }
+    50% {
+      top: -0px;
+      left: -75px;
+    }
+    /* 75% {
+      top: -0px;
+      left: -75px;
+    } */
+    100% {
+      top: 0px;
+      left: 0px;
+    }
   }
 
   .garbage{
-    top: 72%;
+    top: calc(72% - var(--cleaner-icon-height));
+    overflow: hidden;
+    transition: all 0.8s ease;
+    z-index: 10;
+    svg{
+      position: relative;
+      top: var(--cleaner-icon-height);
+      transition: all 0.8s ease;
+    }
+    &.visible{
+      overflow: visible;
+    }
+    &.active{
+      top: 72%;
+      svg{
+        top: 0;
+        animation: garbage 3s ease-in infinite normal 1.2s forwards;
+      }
+    }
+    //top: 72%;
     left: 64%;
+    //transition: all 0.8s ease 0s;
     @media (max-width: em(600)) {
       display: none;
     }
   }
   
- 
+  @keyframes garbage {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    84%{
+      opacity: 1;
+      top: 270px;
+      left: -150px;
+    }
+    85%{
+      opacity: 0;
+    }
+    86%{
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  } 
 
 
 

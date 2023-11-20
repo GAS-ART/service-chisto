@@ -42,18 +42,34 @@ if(topMenuBtn && headerBottomMenu){
 
 //Set CSS variables
 
-function SvgWidthVariable() {
-  const polisherWidth = document.querySelector('.polisher svg').clientWidth;
-  console.log(polisherWidth);
+function svgVariables() {
+  /* const polisherWidth = document.querySelector('.polisher svg').clientWidth; */
   const styleTag = document.querySelector("head style");
-  styleTag.innerHTML += `:root { --polisher-width: ${polisherWidth}px; }`; 
+  const cleanerImageheigt = document.querySelector('.brush').clientHeight
+  const sofaImageWidts = document.querySelector('.sofa').clientWidth
+  //--polisher-width: ${polisherWidth}px;
+  styleTag.innerHTML = `:root {--cleaner-icon-height: ${cleanerImageheigt}px; --sofa-width: ${sofaImageWidts}px;}`; 
 }
 
-SvgWidthVariable();
+svgVariables();
 
-window.addEventListener('resize', polisherWidth);
+window.addEventListener('resize', svgVariables);
 
 /* const styleTag = document.querySelector("head style");
 styleTag.innerHTML += `:root { --scrollbar-width: ${scrollbarWidth}px; }`; */
+
+//Animation
+document.querySelector('.window').classList.add('active');
+document.querySelector('.mop').classList.add('active');
+document.querySelector('.vacun-cleaner').classList.add('active');
+//document.querySelector('.garbage').classList.add('active');
+//document.querySelector('.brush').classList.add('active')
+setTimeout(()=> document.querySelector('.garbage').classList.add('active'), 5800);
+setTimeout(()=> document.querySelector('.garbage').classList.add('visible'), 7200);
+setTimeout(()=> document.querySelector('.brush').classList.add('active'), 6400);
+setTimeout(()=> document.querySelector('.brush').classList.add('visible'), 7200);
+setTimeout(()=> document.querySelector('.sofa').classList.add('active'), 7500);
+setTimeout(()=> document.querySelector('.sofa').classList.add('visible'), 9000);
+
 
 
