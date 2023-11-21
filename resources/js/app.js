@@ -1,4 +1,6 @@
 import './bootstrap';
+import {popUp} from './modules/popup.js';
+import './modules/AsyncFormSending.js';
 
 const HTMLBody = document.querySelector('body')
 
@@ -13,6 +15,12 @@ if(burgerIcon && burger){
     HTMLBody.classList.toggle('lock');
   });
 }
+
+//popup
+const popupLinks = document.querySelectorAll('.link-on-popup');
+popupLinks.forEach(popupLink => {
+  popupLink.addEventListener('click', () => popUp(popupLink.dataset.popup));
+});
 
 const topMenuBtn = document.querySelector('.top-menu-btn');
 const headerBottomMenu = document.querySelector('.header__bottom-menu');
@@ -72,4 +80,21 @@ setTimeout(()=> document.querySelector('.sofa').classList.add('active'), 7500);
 setTimeout(()=> document.querySelector('.sofa').classList.add('visible'), 9000);
 
 
+//Showe-more-mobile
+const showMoreBtn = document.querySelectorAll('.show-more-btn');
+
+showMoreBtn.forEach(btn =>{
+  setTimeout(()=>{
+    const animatedEl = btn.previousElementSibling
+    const height = animatedEl.scrollHeight;
+    btn.addEventListener('click', ()=>{
+      animatedEl.style.height = height+'px';
+      btn.remove();
+      btn.classList.add('inactive');
+      setTimeout(()=>{
+        animatedEl.style.height = 'auto';
+      },1000)
+    });
+  }, 500)
+} );
 

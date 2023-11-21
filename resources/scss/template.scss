@@ -1,0 +1,27 @@
+%title{
+  font-family: RobotoSlab;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+%section{
+  margin-bottom: 90px;
+  @media (max-width: $tablet) {
+    margin-bottom: 70px;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 45px;
+  }
+}
+
+.show-more-btn{
+  display: none;
+  color: #707070;
+  margin-left: auto;
+  margin-top: 20px;
+  @media (max-width: $mobileSmall) {
+    display: block;
+  }
+}

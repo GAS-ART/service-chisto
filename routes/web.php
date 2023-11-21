@@ -15,9 +15,12 @@ use App\Http\Controllers\Pages;
 |
 */
 
+
+
 Route::get('/locale/{locale}', [Controllers\ChangeLanguagesController::class, 'changeLocale'])->name('locale');
 Route::post('/send-main-form', [Controllers\sendController::class, 'submit'])->name('sendMainForm');
 Route::get('/sitemap', [Controllers\SitemapController::class, 'generateSitemap']);
 
 Route::get('/', [Pages\HomeController::class, 'index'])->name('index');
 Route::get('/{locale}', [Pages\HomeController::class, 'index'])->name('home');
+
