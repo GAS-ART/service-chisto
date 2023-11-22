@@ -1,0 +1,144 @@
+.lead-form {
+    @extend %section;
+    background: linear-gradient(90deg, rgba(219, 239, 255, 0.90) 2.23%, #E0EFFF 117.89%);
+    padding: 48px 10px;
+    @media (max-width: $tablet) {
+        padding: 20px 0;
+    }
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__contact {
+        @include adaptiveValueREM('margin-right', 75, 20, 1200, 992, 1);
+        @media (max-width: $tablet) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__title {
+        font-family: RobotoSlab;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 173%;
+        color: #004554;
+        text-align: center;
+        @media (max-width: $mobile) {
+            font-size: 28px;
+            line-height: 130%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        color: #004554;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 173%;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: RobotoSlab;
+        @media (max-width: $mobile) {
+            font-size: 18px;
+        }
+    }
+
+    &__form {
+        padding: 32px;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 15px;
+        position: relative;
+        border-radius: 9px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+        @include adaptiveValueREM('padding', 32, 16, 1200, 992, 1);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            padding: 24px 16px;
+        }
+    }
+
+    &__form-item {
+        @include adaptiveValueREM('width', 316, 278, 1200, 992, 1);
+        label{
+            display: none;
+        }
+        input, select{
+            padding: 12px;
+            width: 100%;
+            height: 100%;
+            color: #777;
+            border-radius: 6px;
+            border: 1px solid #FCFCFC;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.20) inset;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        @include adaptiveValueREM('width', 316, 278, 1200, 992, 1);
+        padding: 12px 0px 12px 12px;
+        background-color: #006C83;
+        color: #ffffff;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        transition: all 0.3s ease 0s;
+        &:active {
+            transform: scale(0.95);
+            //box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+    }
+
+    &__loading{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        &.active{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+}
+
+.error {
+    color: darkred;
+    padding-left: 8px;
+    font-weight: 500;
+}
+
+.error-name {
+}
+
+.error-phone {
+}
+
+.error-select {
+}

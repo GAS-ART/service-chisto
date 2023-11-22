@@ -11,7 +11,8 @@ forms.forEach(form => {
     const token = form.querySelector('input[name="_token"]').value;
     const nameError = form.querySelector('.error-name');
     const phoneError = form.querySelector('.error-phone');
-    const loading = form.closest('.popup__row').previousElementSibling.previousElementSibling;
+    const loadingBody = form.closest('.popup__row');
+    const loading = loadingBody ? loadingBody.previousElementSibling.previousElementSibling : form.querySelector('.lead-form__loading');
     loading.classList.add('active');
     const formData = new FormData(form);
 

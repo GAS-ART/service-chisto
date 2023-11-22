@@ -1,20 +1,20 @@
 @use "sass:math";
 
-// Подключение миксинов 
+// Подключение миксинов
 @import "base/mixins";
 
-// Подключение шрифтов 
+// Подключение шрифтов
 
 //&display=swap - добавить при подключении через плагин
 
 // Подключить если есть локальные файлы шрифтов
 @import "fonts";
 
-// Подключение иконочных шрифтов 
+// Подключение иконочных шрифтов
 // Подключить если есть файл иконочного шрифта
 @import "fonts/icons";
 
-// Шрифт по умолчанию 
+// Шрифт по умолчанию
 $fontFamily: "Roboto";
 
 
@@ -23,16 +23,16 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 // Основные цвета шрифта
 $mainColor: #424242; // Цвет шрифта по умолчанию
 $titleColor: #2C2C2C;
-$darkBlue: #006C83; 
-$darkenBlue: #004554; 
-$darkPink: #B9766F; 
-$lightPink: #FFCCBB; 
+$darkBlue: #006C83;
+$darkenBlue: #004554;
+$darkPink: #B9766F;
+$lightPink: #FFCCBB;
 
 // 404 colors
 $blue: #46B1DE;
 $paleBlue: #A1C7D4;
 
-// НАСТРОЙКИ 
+// НАСТРОЙКИ
 
 // Минимальная ширина страницы
 $minWidth: 360;
@@ -74,7 +74,7 @@ body {
   &.loaded {}
 }
 
-// Оболочка 
+// Оболочка
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -93,9 +93,9 @@ body {
   }
 }
 
-// Ограничивающий контейнер 
+// Ограничивающий контейнер
 /*
-(i) Стили будут применяться ко 
+(i) Стили будут применяться ко
 всем классам содержащим *__container
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
@@ -152,6 +152,7 @@ body {
 }
 
 @import 'template';
+@import 'components/lead';
 @import "header";
 @import "home";
 @import "footer";

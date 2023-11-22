@@ -1,625 +1,875 @@
 .banner {
-  @extend %section;
-  position: relative;
-  overflow: hidden;
-  img {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-
-  .animate-body{
-    width: min-content;
-  }
-
-  .sofa, .brush, .vacun-cleaner, .window, .polisher, .mop, .garbage {
-    position: absolute;
-  }
-
-  .sofa, .brush, .vacun-cleaner, .mop, .garbage {
-    svg{
-      @include adaptiveValueREM('width', 178, 128, 1440, 768, 1);
-      @include adaptiveValueREM('height', 125, 75, 1440, 768, 1);
-      @media (max-width: $mobile) {
-        @include adaptiveValueREM('width', 128, 118, 768, 480, 1);
-        @include adaptiveValueREM('height', 75, 65, 768, 480, 1);
-      }
-    }
-    @media (max-width: $mobileSmall) {
-      svg{
-        width: 158px;
-        height: 105px;
-      }
-    }
-  }
-
-  .sofa {
-    top: 43%;
-    left: calc(15% - var(--sofa-width));
-    overflow: hidden;
-    transition: left 1.5s ease;
-    svg{
-      position: relative;
-      left: var(--sofa-width);
-      transition: left 1.5s ease;
-      @include adaptiveValueREM('width', 208, 128, 1440, 768, 1);
-      @include adaptiveValueREM('height', 155, 75, 1440, 768, 1);
-      
-    }
-    &.visible{
-      overflow: visible;
-    }
-    &.active{
-      left: 15%;
-      svg{
-        left: 0;
-        animation: sofa 3.5s ease-in infinite normal 1.5s forwards;
-      }
-    }
-    @media (max-width: $mobile) {
-      @include adaptiveValueREM('top', 130, 75, 767, 480, 1);
-      @include adaptiveValueREM('left', 92, 45, 767, 480, 1);
-    }
-    @media (max-width: $mobileSmall) {
-      display: none;
-    }
-  }
-
-  @keyframes sofa {
-    0% {
-      left: 0px;
-    }
-    10%{
-      left: 15px;
-    }
-    15% {
-      left: 2px
-    }
-    20%{
-      left: 8px
-    }
-    25%{
-      left: 10px
-    }
-    30%{
-      left: 20px
-    }
-    35%{
-      left: 12px
-    }
-    40%{
-      left: 17px
-    }
-    45%{
-      left: 12px
-    }
-    50%{
-      left: 3px
-    }
-    55%{
-      left: 10px
-    }
-    60%{
-      left: 16px
-    }
-    65%{
-      left: 10px
-    }
-    70%{
-      left: 5px
-    }
-    75%{
-      left: 12px
-    }
-    80%{
-      left: 18px
-    }
-    85%{
-      left: 15px
-    }
-    90%{
-      left: 9px
-    }
-    95%{
-      left: 4px
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
-
-  .brush {
-    top: calc(65% + var(--cleaner-icon-height));
-    overflow: hidden;
-    transition: all 0.8s ease;
-    svg{
-      position: relative;
-      z-index: 5;
-      top: var(--cleaner-icon-height);
-      transition: all 0.8s ease;
-    }
-    &.visible{
-      overflow: visible;
-    }
-    &.active{
-      top: 65%;
-      svg{
-        top: 0;
-        animation: brush 3.5s ease-in infinite normal 1s forwards;
-      }
-    }
-
-    top: 65%;
-    left: 32%;
+    margin: 0 auto 90px auto;
     @media (max-width: $tablet) {
-      left: 23%;
+        margin: 0 auto 70px auto;
     }
     @media (max-width: $mobile) {
-      @include adaptiveValueREM('top', 226, 120, 767, 480, 1);
-      @include adaptiveValueREM('left', 176, 108, 767, 480, 1);
+        margin: 0 auto 45px auto;
     }
-    @media (max-width: em(699)) {
-      display: none;
-    }
-   /*  @media (max-width: $mobileSmall) {
-      display: block;
-      svg{
-        width: 158px;
-        height: 105px;
-      }
-      @include adaptiveValueREM('top', 330, 220, 480, 360, 1);
-      @include adaptiveValueREM('left', 120, 80, 480, 360, 1);
-    }
-    @media (max-width: em(399)) {
-      display: none;
-    } */
-  }
-
-  @keyframes brush {
-    0% {
-      top: 0px;
-      left: 0;
-    }
-    50% {
-      top: 60px;
-      left: -65px;
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  } 
-
-  .vacun-cleaner {
-    top: 57%;
-    left: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease 5s;
-    z-index: 8;
-    svg{
-      position: relative;
-      
-      animation: vacun-cleaner 2.5s ease-in infinite normal 5.8s forwards;
-      transition: transform 0.8s ease 5s;
-      transform: scale(-1, 1);
-    }
-    &.active{
-      opacity: 1;
-      svg{
-        transform: scale(1, 1);
-      }
-    }
-    @media (max-width: $mobile) {
-      top: 57%;
-      left: 50%;
-      @include adaptiveValueREM('top', 190, 80, 767, 480, 1);
-      @include adaptiveValueREM('left', 384, 215, 767, 480, 1);
-    }
-    @media (max-width: $mobileSmall) {
-      @include adaptiveValueREM('top', 480, 310, 480, 360, 1);
-      @include adaptiveValueREM('left', 80, 70, 480, 360, 1);
-      transform: scale(-1, 1);
-    }
-  }
-
-  @keyframes vacun-cleaner {
-    0% {
-      left: 0;
-    }
-    10% {
-      left: 35px;
-    }
-    50% {
-      top: -0px;
-      left: 75px;
-    }
-    /* 75% {
-      top: -0px;
-      left: -75px;
-    } */
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
-
-  .window {
-    z-index: 2;
-    top: 35%;
-    left: 64%;
-    opacity: 0;
-    transition: opacity 0.8s ease 2s;
-    &.active{
-      opacity: 1;
-    }
-    @include adaptiveValueREM('top', 289, 208, 1920, 1500, 1);
-    @include adaptiveValueREM('left', 1218, 930, 1920, 1500, 1);
-    @media (max-width: em(1499)) {
-      @include adaptiveValueREM('top', 208, 150, 1499, 1100, 1);
-      @include adaptiveValueREM('left', 930, 672, 1499, 1100, 1);
-    }
-    @media (max-width: em(1099)) {
-      @include adaptiveValueREM('top', 150, 111, 1099, 768, 1);
-      @include adaptiveValueREM('left', 672, 461, 1099, 768, 1);
-    }
-    @media (max-width: $mobile) {
-      @include adaptiveValueREM('top', 111, 64, 767, 480, 1);
-      @include adaptiveValueREM('left', 461, 270, 767, 480, 1);
-    }
-    svg{
-      position: relative;
-      @include adaptiveValueREM('width', 178, 108, 1440, 768, 1);
-      @include adaptiveValueREM('height', 125, 55, 1440, 768, 1);
-      animation: windows 2.5s linear infinite normal 2s forwards;
-    }
-    @media (max-width: $mobileSmall) {
-      @include adaptiveValueREM('top', 228, 150, 480, 360, 1);
-      @include adaptiveValueREM('left', 65, 30, 480, 360, 1);
-      svg{
-        width: 158px;
-        height: 105px;
-      }
-    }
-  }
-
-  @keyframes windows {
-    0% {
-      top: 0px;
-      left: 0;
-    }
-    50% {
-      top: 25px;
-      left: -35px;
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
-
-  .polisher {
-    top: 31.5%;
-    left: 73%;
+    max-width: 1905px;
+    position: relative;
     overflow: hidden;
-    @include adaptiveValueREM('top',260, 200, 1920, 1500, 1);
-    @include adaptiveValueREM('left',1359, 1060, 1920, 1500, 1);
-    @include adaptiveValueREM('width',270, 210, 1920, 1500, 1);
-    svg{
-      position: relative;
-      left: -100%;
-      animation: polisher 4s linear infinite normal 0s forwards;
+
+    img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    @media (max-width: em(1499)) {
-      @include adaptiveValueREM('top', 200, 145, 1499, 1100, 1);
-      @include adaptiveValueREM('left', 1058.5, 774, 1499, 1100, 1);
-      @include adaptiveValueREM('width',209, 152, 1499, 1100, 1);
-      
+    .animate-body {
+        width: min-content;
     }
-    @media (max-width: em(1099)) {
-      @include adaptiveValueREM('top', 145, 100, 1099, 768, 1);
-      @include adaptiveValueREM('left', 772.5, 535, 1099, 768, 1);
-      @include adaptiveValueREM('width',152, 108, 1099, 768, 1);
+
+    .sofa, .brush, .vacun-cleaner, .window, .polisher, .mop, .garbage {
+        position: absolute;
     }
-    @media (max-width: $mobile) {
-      @include adaptiveValueREM('top', 100, 50, 768, 480, 1);
-      @include adaptiveValueREM('left', 555, 343, 768, 480, 1);
-      @include adaptiveValueREM('width',108, 68, 768, 480, 1);
-    }
-    svg{
-      @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
-      @include adaptiveValueREM('height', 125, 55, 1920, 768, 1);
-    }
-    @media (max-width: $mobileSmall) {
-        @include adaptiveValueREM('top', 210, 138, 480, 360, 1);
-        @include adaptiveValueREM('left', 179, 135, 480, 360, 1);
-        @include adaptiveValueREM('width',161, 120, 480, 360, 1);
-        svg{
-          width: 138px;
-          height: 85px;
+
+    .sofa, .brush, .vacun-cleaner, .mop, .garbage {
+        svg {
+            @include adaptiveValueREM('width', 178, 128, 1440, 768, 1);
+            @include adaptiveValueREM('height', 125, 75, 1440, 768, 1);
+            @media (max-width: $mobile) {
+                @include adaptiveValueREM('width', 128, 118, 768, 480, 1);
+                @include adaptiveValueREM('height', 75, 65, 768, 480, 1);
+            }
+        }
+
+        @media (max-width: $mobileSmall) {
+            svg {
+                width: 158px;
+                height: 105px;
+            }
         }
     }
-  }
 
-  @keyframes polisher {
-     /* 0% {
-      //left: --polisher-width;
-     } */
-     100%{
-      left: 100%;
-     }
+    .sofa {
+        top: 43%;
+        left: calc(15% - var(--sofa-width));
+        overflow: hidden;
+        transition: left 1.5s ease;
+
+        svg {
+            position: relative;
+            left: var(--sofa-width);
+            transition: left 1.5s ease;
+            @include adaptiveValueREM('width', 208, 128, 1440, 768, 1);
+            @include adaptiveValueREM('height', 155, 75, 1440, 768, 1);
+
+        }
+
+        &.visible {
+            overflow: visible;
+        }
+
+        &.active {
+            left: 15%;
+
+            svg {
+                left: 0;
+                animation: sofa 3.5s ease-in infinite normal 1.5s forwards;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            @include adaptiveValueREM('top', 130, 75, 767, 480, 1);
+            @include adaptiveValueREM('left', 92, 45, 767, 480, 1);
+        }
+        @media (max-width: $mobileSmall) {
+            display: none;
+        }
     }
 
-  .mop{
-    top: 50%;
-    left: 75%;
-    //opacity: 0;
-    transition: all 0.8s ease 3.5s;
-    transform: scale(0);
-    &.active{
-      opacity: 1;
-      transform: scale(1);
+    @keyframes sofa {
+        0% {
+            left: 0px;
+        }
+        10% {
+            left: 15px;
+        }
+        15% {
+            left: 2px
+        }
+        20% {
+            left: 8px
+        }
+        25% {
+            left: 10px
+        }
+        30% {
+            left: 20px
+        }
+        35% {
+            left: 12px
+        }
+        40% {
+            left: 17px
+        }
+        45% {
+            left: 12px
+        }
+        50% {
+            left: 3px
+        }
+        55% {
+            left: 10px
+        }
+        60% {
+            left: 16px
+        }
+        65% {
+            left: 10px
+        }
+        70% {
+            left: 5px
+        }
+        75% {
+            left: 12px
+        }
+        80% {
+            left: 18px
+        }
+        85% {
+            left: 15px
+        }
+        90% {
+            left: 9px
+        }
+        95% {
+            left: 4px
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+        }
     }
-    @media (max-width: $mobile) {
-      top: 45%;
-    }
-    @media (max-width: $mobileSmall) {
-      @include adaptiveValueREM('top', 380, 250, 480, 360, 1);
-      @include adaptiveValueREM('left', 250, 150, 480, 360, 1);
-    }
-    svg{
-      position: relative;
-      animation: mop 2.5s ease-in infinite normal 4.5s forwards;
-    }
-  }
 
-  @keyframes mop {
-    0% {
-      top: 0px;
-      left: 0;
-    }
-    25% {
-      top: 15px;
-      left: -35px;
-    }
-    50% {
-      top: -0px;
-      left: -75px;
-    }
-    /* 75% {
-      top: -0px;
-      left: -75px;
-    } */
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
+    .brush {
+        top: calc(65% + var(--cleaner-icon-height));
+        overflow: hidden;
+        transition: all 0.8s ease;
 
-  .garbage{
-    top: calc(72% - var(--cleaner-icon-height));
-    overflow: hidden;
-    transition: all 0.8s ease;
-    z-index: 10;
-    svg{
-      position: relative;
-      top: var(--cleaner-icon-height);
-      transition: all 0.8s ease;
+        svg {
+            position: relative;
+            z-index: 5;
+            top: var(--cleaner-icon-height);
+            transition: all 0.8s ease;
+        }
+
+        &.visible {
+            overflow: visible;
+        }
+
+        &.active {
+            top: 65%;
+
+            svg {
+                top: 0;
+                animation: brush 3.5s ease-in infinite normal 1s forwards;
+            }
+        }
+
+        top: 65%;
+        left: 32%;
+        @media (max-width: $tablet) {
+            left: 23%;
+        }
+        @media (max-width: $mobile) {
+            @include adaptiveValueREM('top', 226, 120, 767, 480, 1);
+            @include adaptiveValueREM('left', 176, 108, 767, 480, 1);
+        }
+        @media (max-width: em(699)) {
+            display: none;
+        }
+        /*  @media (max-width: $mobileSmall) {
+           display: block;
+           svg{
+             width: 158px;
+             height: 105px;
+           }
+           @include adaptiveValueREM('top', 330, 220, 480, 360, 1);
+           @include adaptiveValueREM('left', 120, 80, 480, 360, 1);
+         }
+         @media (max-width: em(399)) {
+           display: none;
+         } */
     }
-    &.visible{
-      overflow: visible;
+
+    @keyframes brush {
+        0% {
+            top: 0px;
+            left: 0;
+        }
+        50% {
+            top: 60px;
+            left: -65px;
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+        }
     }
-    &.active{
-      top: 72%;
-      svg{
-        top: 0;
-        animation: garbage 3s ease-in infinite normal 1.2s forwards;
-      }
+
+    .vacun-cleaner {
+        top: 57%;
+        left: 50%;
+        opacity: 0;
+        transition: opacity 0.3s ease 5s;
+        z-index: 8;
+
+        svg {
+            position: relative;
+
+            animation: vacun-cleaner 2.5s ease-in infinite normal 5.8s forwards;
+            transition: transform 0.8s ease 5s;
+            transform: scale(-1, 1);
+        }
+
+        &.active {
+            opacity: 1;
+
+            svg {
+                transform: scale(1, 1);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            top: 57%;
+            left: 50%;
+            @include adaptiveValueREM('top', 190, 80, 767, 480, 1);
+            @include adaptiveValueREM('left', 384, 215, 767, 480, 1);
+        }
+        @media (max-width: $mobileSmall) {
+            @include adaptiveValueREM('top', 480, 310, 480, 360, 1);
+            @include adaptiveValueREM('left', 80, 70, 480, 360, 1);
+            transform: scale(-1, 1);
+        }
     }
-    //top: 72%;
-    left: 64%;
-    //transition: all 0.8s ease 0s;
-    @media (max-width: em(600)) {
-      display: none;
+
+    @keyframes vacun-cleaner {
+        0% {
+            left: 0;
+        }
+        10% {
+            left: 35px;
+        }
+        50% {
+            top: -0px;
+            left: 75px;
+        }
+        /* 75% {
+          top: -0px;
+          left: -75px;
+        } */
+        100% {
+            top: 0px;
+            left: 0px;
+        }
     }
-  }
-  
-  @keyframes garbage {
-    0% {
-      top: 0px;
-      left: 0px;
+
+    .window {
+        z-index: 2;
+        top: 35%;
+        left: 64%;
+        opacity: 0;
+        transition: opacity 0.8s ease 2s;
+
+        &.active {
+            opacity: 1;
+        }
+
+        @include adaptiveValueREM('top', 289, 208, 1920, 1500, 1);
+        @include adaptiveValueREM('left', 1218, 930, 1920, 1500, 1);
+        @media (max-width: em(1499)) {
+            @include adaptiveValueREM('top', 208, 150, 1499, 1100, 1);
+            @include adaptiveValueREM('left', 930, 672, 1499, 1100, 1);
+        }
+        @media (max-width: em(1099)) {
+            @include adaptiveValueREM('top', 150, 111, 1099, 768, 1);
+            @include adaptiveValueREM('left', 672, 461, 1099, 768, 1);
+        }
+        @media (max-width: $mobile) {
+            @include adaptiveValueREM('top', 111, 64, 767, 480, 1);
+            @include adaptiveValueREM('left', 461, 270, 767, 480, 1);
+        }
+
+        svg {
+            position: relative;
+            @include adaptiveValueREM('width', 178, 108, 1440, 768, 1);
+            @include adaptiveValueREM('height', 125, 55, 1440, 768, 1);
+            animation: windows 2.5s linear infinite normal 2s forwards;
+        }
+
+        @media (max-width: $mobileSmall) {
+            @include adaptiveValueREM('top', 228, 150, 480, 360, 1);
+            @include adaptiveValueREM('left', 65, 30, 480, 360, 1);
+            svg {
+                width: 158px;
+                height: 105px;
+            }
+        }
     }
-    84%{
-      opacity: 1;
-      top: 270px;
-      left: -150px;
+
+    @keyframes windows {
+        0% {
+            top: 0px;
+            left: 0;
+        }
+        50% {
+            top: 25px;
+            left: -35px;
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+        }
     }
-    85%{
-      opacity: 0;
+
+    .polisher {
+        top: 31.5%;
+        left: 73%;
+        overflow: hidden;
+        @include adaptiveValueREM('top', 260, 200, 1920, 1500, 1);
+        @include adaptiveValueREM('left', 1359, 1060, 1920, 1500, 1);
+        @include adaptiveValueREM('width', 270, 210, 1920, 1500, 1);
+
+        svg {
+            position: relative;
+            left: -100%;
+            animation: polisher 4s linear infinite normal 0s forwards;
+        }
+
+        @media (max-width: em(1499)) {
+            @include adaptiveValueREM('top', 200, 145, 1499, 1100, 1);
+            @include adaptiveValueREM('left', 1058.5, 774, 1499, 1100, 1);
+            @include adaptiveValueREM('width', 209, 152, 1499, 1100, 1);
+
+        }
+        @media (max-width: em(1099)) {
+            @include adaptiveValueREM('top', 145, 100, 1099, 768, 1);
+            @include adaptiveValueREM('left', 772.5, 535, 1099, 768, 1);
+            @include adaptiveValueREM('width', 152, 108, 1099, 768, 1);
+        }
+        @media (max-width: $mobile) {
+            @include adaptiveValueREM('top', 100, 50, 768, 480, 1);
+            @include adaptiveValueREM('left', 555, 343, 768, 480, 1);
+            @include adaptiveValueREM('width', 108, 68, 768, 480, 1);
+        }
+
+        svg {
+            @include adaptiveValueREM('width', 178, 108, 1920, 768, 1);
+            @include adaptiveValueREM('height', 125, 55, 1920, 768, 1);
+        }
+
+        @media (max-width: $mobileSmall) {
+            @include adaptiveValueREM('top', 210, 138, 480, 360, 1);
+            @include adaptiveValueREM('left', 179, 135, 480, 360, 1);
+            @include adaptiveValueREM('width', 161, 120, 480, 360, 1);
+            svg {
+                width: 138px;
+                height: 85px;
+            }
+        }
     }
-    86%{
-      top: 0px;
-      left: 0px;
-      opacity: 0;
+
+    @keyframes polisher {
+        /* 0% {
+         //left: --polisher-width;
+        } */
+        100% {
+            left: 100%;
+        }
     }
-    100%{
-      opacity: 1;
+
+    .mop {
+        top: 50%;
+        left: 75%;
+        //opacity: 0;
+        transition: all 0.8s ease 3.5s;
+        transform: scale(0);
+
+        &.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @media (max-width: $mobile) {
+            top: 45%;
+        }
+        @media (max-width: $mobileSmall) {
+            @include adaptiveValueREM('top', 380, 250, 480, 360, 1);
+            @include adaptiveValueREM('left', 250, 150, 480, 360, 1);
+        }
+
+        svg {
+            position: relative;
+            animation: mop 2.5s ease-in infinite normal 4.5s forwards;
+        }
     }
-  } 
+
+    @keyframes mop {
+        0% {
+            top: 0px;
+            left: 0;
+        }
+        25% {
+            top: 15px;
+            left: -35px;
+        }
+        50% {
+            top: -0px;
+            left: -75px;
+        }
+        /* 75% {
+          top: -0px;
+          left: -75px;
+        } */
+        100% {
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    .garbage {
+        top: calc(72% - var(--cleaner-icon-height));
+        overflow: hidden;
+        transition: all 0.8s ease;
+        z-index: 10;
+
+        svg {
+            position: relative;
+            top: var(--cleaner-icon-height);
+            transition: all 0.8s ease;
+        }
+
+        &.visible {
+            overflow: visible;
+        }
+
+        &.active {
+            top: 72%;
+
+            svg {
+                top: 0;
+                animation: garbage 3s ease-in infinite normal 1.2s forwards;
+            }
+        }
+
+        //top: 72%;
+        left: 64%;
+        //transition: all 0.8s ease 0s;
+        @media (max-width: em(600)) {
+            display: none;
+        }
+    }
+
+    @keyframes garbage {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+        84% {
+            opacity: 1;
+            top: 270px;
+            left: -150px;
+        }
+        85% {
+            opacity: 0;
+        }
+        86% {
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
 
+    &__body {
+        position: absolute;
+        top: 0px;
+        left: calc((100% - 1180px) / 2);
+        width: 1180px;
+        height: 100%;
+        color: #FDFDFD;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        @media (max-width: em(1230)) {
+            left: 15px;
+            width: calc(100% - 30px);
+        }
+    }
 
-  &__body {
-    position: absolute;
-    top: 0px;
-    left: calc((100% - 1180px) / 2);
-    width: 1180px;
-    height: 100%;
-    color: #FDFDFD;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    @media (max-width: em(1230)) {
-      left: 15px;
-      width: calc(100% - 30px);
+    &__title {
+        font-family: Roboto Slab;
+        font-size: 40px;
+        @include adaptiveValueREM('font-size', 40, 20, 1180, 360, 1);
+        font-weight: 700;
+        line-height: 140%;
+        max-width: 830px;
+        text-align: center;
+        margin-top: 30px;
+        flex: 1 1 auto;
+        @media (max-width: $tablet) {
+            margin-top: 5px;
+        }
+        @media (max-width: $mobile) {
+            margin-top: -7px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin-top: 25px;
+        }
     }
-  }
 
-  &__title{
-    font-family: Roboto Slab;
-    font-size: 40px;
-    @include adaptiveValueREM('font-size', 40, 20, 1180, 360, 1);
-    font-weight: 700;
-    line-height: 140%;
-    max-width: 830px;
-    text-align: center;
-    margin-top: 30px;
-    flex: 1 1 auto;
-    @media (max-width: $tablet) {
-      margin-top: 5px;
-    }
-    @media (max-width: $mobile) {
-      margin-top: -7px;
-    }
-    @media (max-width: $mobileSmall) {
-      margin-top: 25px;
-    }
-  }
+    &__btn {
+        margin-bottom: 50px;
+        border-radius: 6px;
+        background: #006C83;
+        font-size: 18px;
+        font-weight: 500;
+        // box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.3);
+        padding: 12px 25px;
+        transition: transform 0.2s ease;
 
-  &__btn{
-    margin-bottom: 50px;
-    border-radius: 6px;
-    background: #006C83;
-    font-size: 18px;
-    font-weight: 500;
-   // box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.3);
-    padding: 12px 25px;
-    transition: transform 0.2s ease;
-    &:active {
-      transform: scale(0.95);
-      //box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+        &:active {
+            transform: scale(0.95);
+            //box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: em(1300)) {
+            margin-bottom: 15px;
+        }
+        @media (max-width: $mobile) {
+            padding: 10px;
+            //font-size: 16px;
+        }
+        @media (max-width: em(600)) {
+            margin-bottom: 5px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 25px;
+        }
     }
-    @media (max-width: em(1300)) {
-      margin-bottom: 15px;
-    }
-    @media (max-width: $mobile) {
-      padding: 10px;
-      //font-size: 16px;
-    }
-    @media (max-width: em(600)) {
-      margin-bottom: 5px;
-    }
-    @media (max-width: $mobileSmall) {
-      margin-bottom: 25px;
-    }
-  }
 
 }
 
 .advantages {
-  @extend %section;
-  &__container {
-  }
+    @extend %section;
 
-  &__title {
-    @extend %title;
-  }
-
-  &__body {
-    display: grid;
-    grid-template-columns: repeat(4, 246px);
-    justify-content: center;
-    gap: 20px;
-    overflow: hidden;
-    @media (max-width: em(1180)) {
-      grid-template-columns: repeat(3, 246px);
-    }
-    @media (max-width: $mobile) {
-      grid-template-columns: repeat(2, 246px);
-    }
-    @media (max-width: $mobileSmall) {
-      transition: height 0.8s ease 0s;
-      height: 600px;
-      grid-template-columns:246px;
-    }
-  }
-
-  &__card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px 20px 20px;
-    max-width: 246px;
-    &::before{
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 80%;
-      background-color: #F5F5F5;
-      border-radius: 6px;
-    }
-    &:nth-child(even){
-      &::before{
-        background-color: #FFF5F1;
-      }
-    }
-    @media (min-width: em(1181)) { 
-      &:nth-child(5){
-        grid-column: span 2;
-        align-self: center;
-        justify-self: center;
-      }
-  
-      &:nth-child(6), &:nth-child(7){
-        left: -50%;
-      }
+    &__container {
     }
 
-    @media (max-width: em(1180)) {
-      &:nth-child(7){
-        grid-column: span 3;
-        justify-self: center;
-      }
+    &__title {
+        @extend %title;
     }
-    @media (max-width: $mobile) {
-      &:nth-child(7){
-        grid-column: span 2;
-        justify-self: center;
-      }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 246px);
+        justify-content: center;
+        gap: 20px;
+        overflow: hidden;
+        @media (max-width: em(1180)) {
+            grid-template-columns: repeat(3, 246px);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 246px);
+        }
+        @media (max-width: $mobileSmall) {
+            transition: height 0.8s ease 0s;
+            height: 600px;
+            grid-template-columns:246px;
+        }
     }
-    @media (max-width: $mobileSmall) {
-      &:nth-child(7){
-        grid-column: span 1;
-      }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px 20px 20px;
+        max-width: 246px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            background-color: #F5F5F5;
+            border-radius: 6px;
+        }
+
+        &:nth-child(even) {
+            &::before {
+                background-color: #FFF5F1;
+            }
+        }
+
+        @media (min-width: em(1181)) {
+            &:nth-child(5) {
+                grid-column: span 2;
+                align-self: center;
+                justify-self: center;
+            }
+
+            &:nth-child(6), &:nth-child(7) {
+                left: -50%;
+            }
+        }
+
+        @media (max-width: em(1180)) {
+            &:nth-child(7) {
+                grid-column: span 3;
+                justify-self: center;
+            }
+        }
+        @media (max-width: $mobile) {
+            &:nth-child(7) {
+                grid-column: span 2;
+                justify-self: center;
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            &:nth-child(7) {
+                grid-column: span 1;
+            }
+        }
     }
-  }
 
-  &__card-img {
-    position: relative;
-    text-align: center;
-    margin-bottom: 16px;
-  }
+    &__card-img {
+        position: relative;
+        text-align: center;
+        margin-bottom: 16px;
+    }
 
-  &__card-title {
-    position: relative;
-    font-family: RobotoSlab;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 15px;
-  }
+    &__card-title {
+        position: relative;
+        font-family: RobotoSlab;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 
-  &__card-text {
-    position: relative;
-    text-align: center;
-  }
+    &__card-text {
+        position: relative;
+        text-align: center;
+    }
 }
 
+.price {
+    @extend %section;
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        @extend %title;
+        position: absolute;
+        top: 30px;
+        left: 466px;
+        @media (max-width: $tablet) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__description {
+        display: flex;
+        align-items: flex-end;
+        @include adaptiveValueREM('margin-bottom', 75, 32, 1440, 360, 1);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__description-img {
+        margin-right: 60px;
+        @media (max-width: $tablet) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__description-text {
+        margin-top: 70px;
+        font-size: 16px;
+        line-height: 135%;
+        @media (max-width: $tablet) {
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+    }
+
+    &__content-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    &__content-list {
+    }
+
+    &__content-item {
+        font-size: 16px;
+        line-height: 135%;
+        padding-left: 24px;
+        margin-left: 12px;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #6FB5BF;
+        }
+    }
+}
+
+.proposition {
+    @extend %section;
+
+    &__container {
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, 305px));
+        @include adaptiveValueREM('grid-column-gap', 60, 20, 1200, 992, 1);
+        row-gap: 40px;
+        justify-content: center;
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, minmax(min-content, 305px));
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 305px;
+        }
+    }
+
+    &__item {
+        text-align: center;
+
+    }
+
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 135%
+    }
+}
+
+.works {
+    @extend %section;
+    &__container {
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 340px);
+        @include  adaptiveValueREM('gap', 50, 0, 1440, 992, 1);
+        justify-content: center;
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 340px);
+            gap: 10px;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: 340px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        text-align: center;
+    }
+
+    &__img {
+        position: relative;
+        margin-bottom: 0px;
+        box-shadow: 0px 4px 10px 0px rgba(87, 86, 86, 0.05);
+        border-radius: 6px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            width: 320px;
+            height: 88%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+            border-radius: 6px;
+            transition: all 0.5s ease 0s;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        &:hover{
+            &:before{
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+            .works__btn{
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+
+    }
+
+    &__sub-title {
+        font-size: 16px;
+        line-height: 135%;
+        border-radius: 6px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        background-color: #6FB5BF;
+        color: #ffffff;
+        border-radius: 9px;
+        padding: 10px;
+        transition: all 0.5s ease 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        &:active {
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+    }
+}
