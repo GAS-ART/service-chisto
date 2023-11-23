@@ -171,6 +171,12 @@
             border: 1px solid #E0E0E0;
             pointer-events: none;
         }
+        select{
+            color: #777;
+            option{
+                color: #000;
+            }
+        }
     }
 
     &__btn {

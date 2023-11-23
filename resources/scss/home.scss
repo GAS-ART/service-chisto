@@ -805,7 +805,10 @@
             gap: 10px;
         }
         @media (max-width: $mobile) {
+            height: 370px;
+            transition: height 0.5s ease 0s;
             grid-template-columns: 340px;
+            overflow: hidden;
         }
     }
 
