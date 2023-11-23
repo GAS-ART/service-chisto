@@ -12,7 +12,7 @@ forms.forEach(form => {
     const nameError = form.querySelector('.error-name');
     const phoneError = form.querySelector('.error-phone');
     const loadingBody = form.closest('.popup__row');
-    const loading = loadingBody ? loadingBody.previousElementSibling.previousElementSibling : form.querySelector('.lead-form__loading');
+    const loading = loadingBody ? loadingBody.previousElementSibling.previousElementSibling : form.querySelector('.form-loading');
     loading.classList.add('active');
     const formData = new FormData(form);
 

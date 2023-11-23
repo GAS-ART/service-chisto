@@ -1,6 +1,14 @@
 {
+  "public/img/icons/tick.webp": {
+    "file": "assets/tick-4ffea053.webp",
+    "src": "public/img/icons/tick.webp"
+  },
+  "public/img/icons/tick_m.webp": {
+    "file": "assets/tick_m-3e380ed4.webp",
+    "src": "public/img/icons/tick_m.webp"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-086c5ad5.js",
+    "file": "assets/app-4aeeb69d.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -77,7 +85,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-91c07568.css",
+    "file": "assets/style-fdf5ae44.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

@@ -1517,7 +1517,6 @@
             </div>
         </div>
     </div>
-
     <div class="works">
         <div class="works__container">
             <h2 class="works__title">@lang('home.works.title')</h2>
@@ -1624,6 +1623,51 @@
         </div>
     </div>
 
-
+    <div class="about">
+        <div class="about__container">
+            <h2 class="about__title">@lang('home.about.title')</h2>
+            <p class="about__sub-title">@lang('home.about.sub_title')</p>
+            <ul class="about__list">
+                <li class="about__list-item">@lang('home.about.list.1')</li>
+                <li class="about__list-item">@lang('home.about.list.2')</li>
+                <li class="about__list-item">@lang('home.about.list.3')</li>
+            </ul>
+            <div class="about__form">
+                <div class="about__form-img"><img src="{{ asset('img/home/form.webp') }}" alt="cleaning team"></div>
+                <form action="{{ route('sendMainForm') }}" method="POST" name="mainFormBottom"
+                    class="@lang('lang.current')">
+                    @csrf
+                    <div class="form-loading">
+                        <img src="{{ asset('img/load.gif') }}" alt="">
+                    </div>
+                    <input name="page" type="hidden" value="{{ url()->current() }}">
+                    <div class="about__form-item select">
+                        <label for="form-bottom-select">@lang('common.select.popup')</label>
+                        <select name="service" id="form-bottom-select">
+                            <option hidden disabled selected value="">@lang('common.select.placeholder')</option>
+                            <option value="Хімчистка">@lang('common.select.dry_cleaning')</option>
+                            <option value="Мийка вікон">@lang('common.select.windows')</option>
+                            <option value="Прибирання">@lang('common.select.cleaning')</option>
+                            <option value="Післяремонтне прибирання">@lang('common.select.renovation')</option>
+                            <option value="Екстримальне прибирання">@lang('common.select.extreme')</option>
+                            <option value="Інше питання">@lang('common.select.other')</option>
+                        </select>
+                        <p class="error-select"></p>
+                    </div>
+                    <div class="about__form-item">
+                        <label for="form-bottom-name">@lang('popup.name')</label>
+                        <input id="form-bottom-name" name="name" type="text" placeholder="@lang('popup.name_placeholder')">
+                        <p class="error-name"></p>
+                    </div>
+                    <div class="about__form-item">
+                        <label for="form-bottom-phone">@lang('popup.phone')</label>
+                        <input id="form-bottom-phone" name="phone" type="text" placeholder="@lang('popup.phone_placeholder')">
+                        <p class="error-phone"></p>
+                    </div>
+                    <button class="about__form-btn" type="submit">@lang('lead_form.btn')</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 @endsection

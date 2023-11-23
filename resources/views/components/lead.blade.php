@@ -5,8 +5,8 @@
                 <h2 class="lead-form__title">@lang('lead_form.title')</h2>
                 <p class="lead-form__text">@lang('lead_form.text')</p>
                 <form class="lead-form__form" action="{{ route('sendMainForm') }}" method="POST" name="mainForm"
-                    id="mainForm" class="@lang('lang.current')">
-                    <div class="lead-form__loading">
+                    {{-- id="mainForm" --}} class="@lang('lang.current')">
+                    <div class="form-loading">
                         <img src="{{ asset('img/load.gif') }}" alt="">
                     </div>
                     @csrf
@@ -22,7 +22,7 @@
                             <option hidden disabled selected value="">@lang('common.select.placeholder')</option>
                             <option value="Хімчистка">@lang('common.select.dry_cleaning')</option>
                             <option value="Мийка вікон">@lang('common.select.windows')</option>
-                            <option value="Приберання">@lang('common.select.cleaning')</option>
+                            <option value="Прибирання">@lang('common.select.cleaning')</option>
                             <option value="Післяремонтне прибирання">@lang('common.select.renovation')</option>
                             <option value="Екстримальне прибирання">@lang('common.select.extreme')</option>
                             <option value="Інше питання">@lang('common.select.other')</option>
