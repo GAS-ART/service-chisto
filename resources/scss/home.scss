@@ -1061,54 +1061,15 @@
     }
 
     &__slider-btns{
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        
     }
 
     &__slider-prev {
-        margin-right: 30px;
-        cursor: pointer;
-        svg{
-            path{
-                transition: all 0.8s ease 0s;
-            }
-            rect{
-                transition: all 0.8s ease 0s;
-            }
-        }
-        &:hover{
-            svg{
-                path{
-                    stroke: #FCAA8F;
-                }
-                rect{
-                    stroke: #FCAA8F;
-                }
-            }
-        }
+        
     }
 
     &__slider-next {  
-        cursor: pointer;
-        svg{
-            path{
-                transition: all 0.3s ease 0s;
-            }
-            rect{
-                transition: all 0.3s ease 0s;
-            }
-        }
-        &:hover{
-            svg{
-                path{
-                    stroke: #FCAA8F;
-                }
-                rect{
-                    stroke: #FCAA8F;
-                }
-            }
-        }
+        
     }
 }
 
