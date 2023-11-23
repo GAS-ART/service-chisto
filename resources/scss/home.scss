@@ -881,6 +881,7 @@
     background: linear-gradient(90deg, rgba(219, 239, 255, 0.90) 2.23%, #E0EFFF 117.89%);
     padding-top: 75px;
     padding-bottom: 75px;
+    @extend %section;
     @media (max-width: $tablet) {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -1033,4 +1034,85 @@
         }
     }
 }
+
+.clients {
+    @extend %section;
+    &__container {
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__slider {
+    }
+
+    &__slider-wrapper {
+        @include adaptiveValueREM('margin-bottom', 48, 28, 1440, 360, 1);
+        @media (pointer: fine) {
+          &:hover {
+            cursor: grab;
+          }
+        }
+    }
+
+    &__slider-slide {
+        text-align: center;
+    }
+
+    &__slider-btns{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__slider-prev {
+        margin-right: 30px;
+        cursor: pointer;
+        svg{
+            path{
+                transition: all 0.8s ease 0s;
+            }
+            rect{
+                transition: all 0.8s ease 0s;
+            }
+        }
+        &:hover{
+            svg{
+                path{
+                    stroke: #FCAA8F;
+                }
+                rect{
+                    stroke: #FCAA8F;
+                }
+            }
+        }
+    }
+
+    &__slider-next {  
+        cursor: pointer;
+        svg{
+            path{
+                transition: all 0.3s ease 0s;
+            }
+            rect{
+                transition: all 0.3s ease 0s;
+            }
+        }
+        &:hover{
+            svg{
+                path{
+                    stroke: #FCAA8F;
+                }
+                rect{
+                    stroke: #FCAA8F;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 

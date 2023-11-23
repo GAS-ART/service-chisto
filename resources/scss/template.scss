@@ -51,3 +51,58 @@ form{
     margin-bottom: 3px;
   }
 }
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-btns-body{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.swiper-prev-btn {
+  margin-right: 30px;
+  cursor: pointer;
+  svg{
+      path{
+          transition: all 0.8s ease 0s;
+      }
+      rect{
+          transition: all 0.8s ease 0s;
+      }
+  }
+  &:hover{
+      svg{
+          path{
+              stroke: #FCAA8F;
+          }
+          rect{
+              stroke: #FCAA8F;
+          }
+      }
+  }
+}
+.swiper-next-btn {
+  cursor: pointer;
+        svg{
+            path{
+                transition: all 0.3s ease 0s;
+            }
+            rect{
+                transition: all 0.3s ease 0s;
+            }
+        }
+        &:hover{
+            svg{
+                path{
+                    stroke: #FCAA8F;
+                }
+                rect{
+                    stroke: #FCAA8F;
+                }
+            }
+        }
+}

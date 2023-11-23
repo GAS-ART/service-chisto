@@ -1622,7 +1622,6 @@
             <button class="advantages__show-more show-more-btn">@lang('home.advantages.show_more')</button>
         </div>
     </div>
-
     <div class="about">
         <div class="about__container">
             <h2 class="about__title">@lang('home.about.title')</h2>
@@ -1666,6 +1665,60 @@
                     </div>
                     <button class="about__form-btn" type="submit">@lang('lead_form.btn')</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="clients">
+        <div class="clients__container">
+            <h2 class="clients__title">@lang('home.clients.title')</h2>
+            <div class="clients__slider swiper">
+                <!-- Additional required wrapper -->
+                <div class="clients__slider-wrapper swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                            alt=""></div>
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                            alt=""></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="clients__slider-btns swiper-btns-body">
+                    <div class="clients__slider-prev swiper-prev-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34"
+                            fill="none">
+                            <rect x="0.5" y="0.5" width="33.5" height="33" rx="3.5" stroke="#ACACAC" />
+                            <path d="M22.5 24.3915L12 17.2739L22.5 9.60889" stroke="#ACACAC" />
+                        </svg>
+                    </div>
+                    <div class="clients__slider-next swiper-next-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34"
+                            fill="none">
+                            <rect x="1" y="0.5" width="33.5" height="33" rx="3.5" stroke="#ACACAC" />
+                            <path d="M12.5 24.3915L23 17.2739L12.5 9.60889" stroke="#ACACAC" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 import './bootstrap';
 import {popUp} from './modules/popup.js';
 import './modules/AsyncFormSending.js';
+import "./modules/swiper.js";
 
 window.onload = function () {
 

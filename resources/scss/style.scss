@@ -151,6 +151,9 @@ body {
   }
 }
 
+@import "swiper/swiper";
+@import "swiper/navigation";
+@import "swiper/scrollbar";
 @import 'template';
 @import 'components/lead';
 @import "header";
