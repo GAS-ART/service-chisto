@@ -17,10 +17,12 @@
 }
 
 .show-more-btn{
+  position: relative;
   display: none;
   color: #707070;
   margin-left: auto;
   margin-top: 20px;
+  z-index: 5;
   @media (max-width: $mobileSmall) {
     display: block;
   }

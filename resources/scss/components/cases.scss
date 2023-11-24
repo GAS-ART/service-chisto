@@ -1,0 +1,44 @@
+.cases {
+  @extend %section;
+
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 34px;
+    row-gap: 16px;
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: $mobileSmall) {
+      height: calc(var(--case-item-height) + 5px) ;
+      overflow: hidden;
+      transition: height 0.8s ease 0s;
+    }
+  }
+
+  &__item {
+    padding: 32px;
+    border-radius: 15px;
+    border: 1px solid #E2E8E4;
+  }
+
+  &__item-title {
+    font-family: RobotoSlab;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 18px;
+  }
+
+  &__item-text {
+    color: #424242;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,56 @@
+.four-advantages {
+  @extend %section;
+
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+    margin-bottom: 98px;
+    @media (max-width: $tablet) {
+      margin-bottom: 75px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__item {
+    position: relative;
+    padding: 22px;
+    max-width: 985px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 16px;
+    &:not(:last-child){
+      @include adaptiveValueREM('margin-bottom', 90, 48, 1440, 360, 1);
+    }
+    &:nth-child(odd){
+      background-color: #EDF7FF;
+    }
+    &:nth-child(even){
+      background-color: #FFF5F1;
+    }
+  }
+
+  &__text {
+    color:  #2C2C2C;
+    @include adaptiveValueREM('font-size', 22, 16, 1440, 360, 1);
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__number {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    transform: translateY(-56%);
+    @include adaptiveValueREM('font-size', 74, 36, 1440, 360, 1);
+    font-weight: 700;
+    line-height: 150%;
+    color: #006C83;
+  }
+}

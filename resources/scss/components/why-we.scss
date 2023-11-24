@@ -1,0 +1,47 @@
+.why-we {
+  @extend %section;
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+    font-size: 22px;
+    color: #2C2C2C;
+    line-height: 130%;
+    span{
+      font-weight: 500;
+    }
+    &:not(:last-child){
+      margin-bottom: 32px;
+      @media (max-width: $mobile) {
+        margin-bottom: 28px;
+      }
+    }
+    position: relative;
+        @include adaptiveValueREM('font-size', 20, 14 , 1440, 360, 1);
+        @include adaptiveValueREM('margin-left', 17, 0, 1440, 992, 1);
+        @include adaptiveValueREM('padding-left', 54, 44, 1440, 992, 1);
+        margin-bottom: 40px;
+        line-height: 110%;
+        &::before{
+            content: url('../../public/img/icons/tick.webp');
+            position: absolute;
+            top: -8px;
+            left: 0;
+            @media (max-width: $tablet) {
+              top: 0px;
+                content: url('../../public/img/icons/tick_m.webp');
+            }
+        }
+        @media (max-width: $tablet) {
+        margin-bottom: 25px;
+        @include adaptiveValueREM('padding-left', 44, 32, 991, 360, 1);
+        } 
+  }
+}

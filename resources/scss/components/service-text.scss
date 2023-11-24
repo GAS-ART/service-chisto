@@ -1,0 +1,16 @@
+.service-text {
+  @extend %section;
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__text {
+    color: #000;
+    font-family: RobotoSlab;
+    font-size: 20px;
+    line-height: 150%
+  }
+}

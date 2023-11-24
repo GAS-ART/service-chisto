@@ -1,0 +1,36 @@
+.questions {
+  @extend %section;
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+  }
+
+  &__qustion {
+  }
+}
+.qustion {
+
+  &__body {
+    max-width: 680px;
+  }
+
+  &__question {
+  }
+
+  &__plus-icon {
+  }
+
+  &__answer {
+  }
+}

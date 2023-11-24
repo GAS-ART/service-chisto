@@ -24,3 +24,5 @@ Route::get('/sitemap', [Controllers\SitemapController::class, 'generateSitemap']
 Route::get('/', [Pages\HomeController::class, 'index'])->name('index');
 Route::get('/{locale}', [Pages\HomeController::class, 'index'])->name('home');
 
+Route::get('/{locale}/dry-cleaning', [Pages\DryCleaningController::class, 'index'])->name('dry-cleaning.index');
+
