@@ -8,8 +8,10 @@
             <div class="questions__qustion qustion">
                 <div class="qustion__body">
                     @for ($i = 0; $i < count($questions); $i += 2)
-                        <div class="qustion__question">@lang($questions[$i])<span class="qustion__plus-icon"><span></div>
-                        <div class="qustion__answer">@lang($questions[$i + 1])</div>
+                        <div class="question__question">
+                            <h3 class="question__title">@lang($questions[$i])</h3><span class="question__plus-icon"></span>
+                        </div>
+                        <div class="question__answer">@lang($questions[$i + 1])</div>
                     @endfor
                 </div>
             </div>

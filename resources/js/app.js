@@ -87,7 +87,7 @@ selects.forEach(select => {
     select.addEventListener('change', changeSelectHandler);
 });
 
-//Showe-more-mobile
+//Showe-more-mobile, questions
 window.onload = function () {
 
     const styleTag = document.querySelector("head style");
@@ -112,4 +112,39 @@ window.onload = function () {
             });
         });
     }
+
+    const questionTitles = document.querySelectorAll('.question__title');
+
+    if(questionTitles){
+        const setAnswerHieght = (questionAnswer, questionBtn)=>{
+    
+            questionTitles.forEach(title => {
+                const questionBody = title.closest('.question__question');
+                const btn = title.nextElementSibling;
+                const answer = questionBody.nextElementSibling;
+                if(answer != questionAnswer){
+                    answer.style.height = '0px';
+                    btn.classList.remove('active');
+                }
+            });
+    
+            if(!questionAnswer.style.height || questionAnswer.style.height === '0px'){
+                questionAnswer.style.height = questionAnswer.scrollHeight + 'px';
+                questionBtn.classList.add('active');
+            } else {
+                questionAnswer.style.height = '0px';
+                questionBtn.classList.remove('active');
+            }
+        }
+        questionTitles.forEach(title => {
+        
+            const questionBody = title.closest('.question__question');
+            const questionBtn = title.nextElementSibling;
+            const questionAnswer = questionBody.nextElementSibling;
+            
+            title.addEventListener('click', () => setAnswerHieght(questionAnswer, questionBtn));
+            questionBtn.addEventListener('click', () => setAnswerHieght(questionAnswer, questionBtn));
+        });
+    }
+
 }
