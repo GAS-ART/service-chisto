@@ -76,7 +76,15 @@ class DryCleaningController extends SetLangAndViewController
             $questions[] = "dry-cleaning.questions.question_$i";
             $questions[] = "dry-cleaning.questions.answer_$i";
         }
+
+        $slider = [];
+        for ($i=1; $i <= 5; $i++) { 
+            $slider[] = "img/dry-cleaning/slider/$i.webp";
+            $slider[] = "img/dry-cleaning/slider/${i}_ok.webp";
+            $slider[] = "dry-cleaning.slider.slide_$i.name";
+            $slider[] = "dry-cleaning.slider.slide_$i.review";
+        }
         
-        return $this->setLocaleAndView($locale, 'dry-cleaning.index', compact('services', 'cases', 'fourAdvantages', 'whyWe', 'questions'));
+        return $this->setLocaleAndView($locale, 'dry-cleaning.index', compact('services', 'cases', 'fourAdvantages', 'whyWe', 'questions', 'slider'));
     }
 }

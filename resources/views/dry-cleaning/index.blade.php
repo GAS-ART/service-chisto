@@ -16,4 +16,5 @@
     <x-four-advantages :$fourAdvantages />
     <x-why-we :$whyWe />
     <x-questions :$questions />
+    <x-slider :$slider />
 @endsection

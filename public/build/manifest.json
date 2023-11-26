@@ -8,7 +8,7 @@
     "src": "public/img/icons/tick_m.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-75b772e6.js",
+    "file": "assets/app-a9666eb7.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -85,7 +85,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-e1163a67.css",
+    "file": "assets/style-bcb25a33.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

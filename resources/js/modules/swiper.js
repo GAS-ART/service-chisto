@@ -1,9 +1,6 @@
 import Swiper, { Navigation } from 'swiper';
 
-
-// init Swiper:
 new Swiper('.clients__slider', {
-  // configure Swiper to use modules
   modules: [Navigation],
   simulateTouch: true,
   slidesPerView: 1,
@@ -25,5 +22,18 @@ new Swiper('.clients__slider', {
     768: {
       slidesPerView: 2,
     },
+  },
+});
+
+new Swiper('.slider__body', {
+  modules: [Navigation],
+  simulateTouch: true,
+  slidesPerView: 1,
+  spaceBetween: 5,
+  loop: true,
+  speed: 800,
+  navigation: {
+    nextEl: '.clients__slider-next',
+    prevEl: '.clients__slider-prev',
   },
 });

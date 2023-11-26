@@ -1,0 +1,148 @@
+.slider {
+  @extend %section;
+
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+    @media (max-width: $tablet) {
+      margin-bottom: 5px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__wrapper {
+    margin-bottom: 30px;
+  }
+
+  &__slide {
+    cursor: grab;
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.slide {
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    @media (max-width: $tablet) {
+      position: relative;
+      img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      }
+    }
+  }
+
+  &__before {
+  }
+
+  &__after {
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 242px;
+    height: 137.5px;
+    object-fit: contain;
+    @media (max-width: $tablet) {
+      width: calc(242px / 2) ;
+      height: calc(137.5px / 2);
+    }
+    @media (max-width: $mobileSmall) {
+      width: calc(242px / 3) ;
+      height: calc(137.5px / 3);
+    }
+    }
+  }
+
+  &__review {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #E2E8E4;
+    border-radius: 10px;
+    width: 268px;
+    z-index: 2;
+    @media (max-width: $tablet) {
+      position: relative;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: $mobile) {
+      top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__review-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E2E8E4;
+  }
+
+  &__review-name {
+    font-family: RobotoSlab;
+    font-size: 18px;
+    color: #424242;
+  }
+
+  &__review-img {
+  }
+
+  &__review-description {
+  }
+
+  &__review-text {
+    color: #696969;
+    line-height: 150%
+  }
+}
+.clients {
+
+  &__slider-btns {
+  }
+
+  &__slider-prev {
+  }
+
+  &__slider-next {
+  }
+}
+.swiper-btns-body {
+}
+.swiper-prev-btn {
+}
+.swiper-next-btn {
+}
