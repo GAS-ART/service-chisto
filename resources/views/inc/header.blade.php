@@ -110,7 +110,8 @@
                                         </a>
                                         <ul class="menu-header__sub-list">
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('dry-cleaning.furniture', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.dry_cleaning.furniture')</h3>
                                                 </a>
                                             </li>
@@ -218,7 +219,8 @@
                             </a>
                             <ul class="burger-menu-header__sub-list">
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('dry-cleaning.furniture', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.dry_cleaning.furniture')</h3>
                                     </a>
                                 </li>

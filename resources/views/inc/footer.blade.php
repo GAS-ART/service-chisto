@@ -95,7 +95,8 @@
                         <li class="footer__menu-li"><a href="{{ route('dry-cleaning.index', __('lang.current')) }}"
                                 class="footer__menu-link">@lang('menu.dry_cleaning.title')</a>
                             <ul class="footer__menu-sub-list">
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('dry-cleaning.furniture', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.dry_cleaning.furniture')</a></li>
                                 <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
                                         class="footer__menu-sub-link">@lang('menu.dry_cleaning.carpet')</a></li>

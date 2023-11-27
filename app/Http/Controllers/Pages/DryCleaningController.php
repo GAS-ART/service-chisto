@@ -87,4 +87,13 @@ class DryCleaningController extends SetLangAndViewController
         
         return $this->setLocaleAndView($locale, 'dry-cleaning.index', compact('services', 'cases', 'fourAdvantages', 'whyWe', 'questions', 'slider'));
     }
+
+    public function furniture($locale = null){
+        $banner = [
+           'img' => 'img/dry-cleaning/furniture/banner.webp',
+           'img_mobile' => 'img/dry-cleaning/furniture/banner_m.webp',
+           'title' => 'dry-cleaning.furniture.title',
+        ];
+        return $this->setLocaleAndView($locale, 'dry-cleaning.furniture', compact('banner'));
+    }
 }

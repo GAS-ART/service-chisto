@@ -1,0 +1,33 @@
+.service-banner {
+  @extend %section;
+  position: relative;
+  &__img {
+    position: relative;
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    @extend %title;
+    @include adaptiveValueREM('font-size', 40,28,1440,360,1);
+  }
+}
+

@@ -6,13 +6,9 @@
 @section('ogDescription', __('titles.dry_cleaning.furniture.ogDescription'))
 
 @section('content')
-    <div class="breadcrumbs">
-        <div class="breadcrumbs__container">
-            <nav class="breadcrumbs__body">
-                <span class="breadcrumbs__item">@lang('breadcrumbs.dry_cleaning.title')</span>
-                <span> > </span>
-                <span class="breadcrumbs__item">@lang('breadcrumbs.dry_cleaning.furniture')</span>
-            </nav>
-        </div>
-    </div>
+    <x-breadcrumbs>
+        <x-slot name="main">@lang('dry-cleaning.furniture.breadcrumbs.main_page')</x-slot>
+        <x-slot name="current">@lang('dry-cleaning.furniture.breadcrumbs.current_page')</x-slot>
+    </x-breadcrumbs>
+    <x-service-banner :$banner />
 @endsection
