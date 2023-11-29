@@ -1,4 +1,4 @@
-<div class="lead-form">
+<div class="lead-form" @isset($slot)style="{{ $slot }}@endisset">
     <div class="lead-form__container">
         <div class="lead-form__body">
             <div class="lead-form__contact">

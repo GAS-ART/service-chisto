@@ -90,10 +90,38 @@ class DryCleaningController extends SetLangAndViewController
 
     public function furniture($locale = null){
         $banner = [
-           'img' => 'img/dry-cleaning/furniture/banner.webp',
-           'img_mobile' => 'img/dry-cleaning/furniture/banner_m.webp',
-           'title' => 'dry-cleaning.furniture.title',
+            'img' => 'img/dry-cleaning/furniture/banner.webp',
+            'img_mobile' => 'img/dry-cleaning/furniture/banner_m.webp',
+            'title' => 'dry-cleaning.furniture.title',
         ];
-        return $this->setLocaleAndView($locale, 'dry-cleaning.furniture', compact('banner'));
+
+        $stages = [
+            'title' => 'dry-cleaning.furniture.stages.title',
+            'text' => 'dry-cleaning.furniture.stages.text',
+            'content' => [],
+        ];
+        for($i=1; $i<9; $i++){
+            $stages['content']["stage_$i"] = ['img' => "img/dry-cleaning/furniture/stages/$i.webp",'title' => "dry-cleaning.furniture.stages.stage_$i.title", 'text' =>"dry-cleaning.furniture.stages.stage_$i.text"]; 
+        }
+
+        $fourAdvantages = ['dry-cleaning.four_advantages.title'];
+        for ($i=1; $i < 5; $i++) { 
+            $fourAdvantages[] = "dry-cleaning.furniture.four_advantages.$i";
+            $fourAdvantages[] = "dry-cleaning.furniture.four_advantages.0$i";
+        }
+
+        $typeClients = ['title' => 'dry-cleaning.furniture.clients.title', 'content' => []];
+        for ($i=1; $i < 7; $i++) { 
+            $typeClients['content']["client_$i"] = ['img' => "img/dry-cleaning/furniture/clients/$i.webp",'title' => "dry-cleaning.furniture.clients.client_$i.title", 'text' => "dry-cleaning.furniture.clients.client_$i.text"];
+        }
+
+        $recommend = ['title' => 'dry-cleaning.furniture.recommend.title', 'content' => []];
+
+        for ($i=1; $i < 4; $i++) { 
+            $recommend['content']["item_$i"] = ['img' => "img/dry-cleaning/furniture/recommend/$i.webp",'title' => "dry-cleaning.furniture.recommend.item_$i.title", 'text' => "dry-cleaning.furniture.recommend.item_$i.text"];
+        }
+
+
+        return $this->setLocaleAndView($locale, 'dry-cleaning.furniture', compact('banner', 'stages', 'fourAdvantages', 'typeClients', 'recommend'));
     }
 }

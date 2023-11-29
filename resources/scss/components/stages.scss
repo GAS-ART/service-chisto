@@ -1,0 +1,70 @@
+.stages {
+  @extend %section;
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%; 
+    margin-bottom: 48px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 135%; 
+      text-align: left;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(310px, 384px) minmax(310px, 384px);
+    row-gap: 24px;
+    column-gap: 105px;
+    @include adaptiveValueREM('column-gap', 105, 25, 1440, 768, 1);
+    justify-content: center;
+    @media (max-width: $mobile) {
+      grid-template-columns: 310px;
+      overflow: hidden;
+      height: var(--case-stage-height);
+      transition: height 0.8s ease 0s;
+    }
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__stage-img {
+    margin-bottom: 20px;
+    @media (max-width: $tablet) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__stage-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 20px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__stage-text {
+    font-style: 16px;
+    line-height: 135%;
+    text-align: justify;
+  }
+}
+

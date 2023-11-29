@@ -1,0 +1,57 @@
+.type-cliets {
+  @extend %section;
+
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(310px, 530px) minmax(310px, 530px);
+    row-gap: 48px;
+    @include adaptiveValueREM('column-gap', 70, 40, 1440, 768, 1);
+    justify-content: center;
+    @media (max-width: $mobile) {
+      grid-template-columns: minmax(310px, 530px);
+      gap: 28px;
+    }
+  }
+
+  &__client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__client-img {
+    margin-bottom: 25px;
+  }
+
+  &__client-title {
+    font-family: RobotoSlab;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__client-text {
+    font-size: 16px;
+    line-height: 135%;
+    text-align: justify;
+    transition: height 0.8s ease 0s;
+  }
+}
+.advantages {
+
+  &__show-more {
+  }
+}
+.show-more-btn {
+}
+.show-more-btn-color {
+}

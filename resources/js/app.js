@@ -4,6 +4,7 @@ import './modules/AsyncFormSending.js';
 import "./modules/swiper.js";
 
 //Set CSS variables
+const currentLang = document.documentElement.lang;
 const mainPageBanner = document.querySelector('.banner');
 if(mainPageBanner){
     function svgVariables() {
@@ -87,7 +88,7 @@ selects.forEach(select => {
     select.addEventListener('change', changeSelectHandler);
 });
 
-//Showe-more-mobile, questions
+//Showe-more-mobile, questions, stages
 window.onload = function () {
 
     const styleTag = document.querySelector("head style");
@@ -147,4 +148,39 @@ window.onload = function () {
         });
     }
 
+
+    const stages = document.querySelector('.stages');
+
+    if(stages){
+        const fisrtStage = stages.querySelector('.stages__stage');
+        const secondStage = fisrtStage.nextElementSibling;
+        const stagesHieght = fisrtStage.scrollHeight + secondStage.scrollHeight + 36;
+        styleTag.innerHTML = `:root {--case-stage-height: ${stagesHieght}px;}`;
+       //console.log(styleTag.innerHTML.split(';'));
+    }
+}
+
+
+const typeClientsTexts = document.querySelectorAll('.type-cliets__client-text');
+
+if(typeClientsTexts && window.innerWidth < 480){
+    typeClientsTexts.forEach(text => {
+        const words = text.innerText.split(' ');
+        const firstSevenWords = words.slice(0, 7).join(' ');
+        const remainingText = words.slice(7).join(' ');
+        const showTextBtn = document.createElement('button');
+        showTextBtn.classList.add('show-text-btn');
+        currentLang === 'ua' ? showTextBtn.innerText = '...Читати далі' : showTextBtn.innerText = '...Читать дальше';
+        text.innerHTML = firstSevenWords + ' ';
+        text.insertAdjacentElement('beforeend', showTextBtn);
+        text.style.height = text.offsetHeight + 'px';
+        text.style.overflow = 'hidden';
+        showTextBtn.addEventListener('click', ()=>{
+            const span = document.createElement('span');
+            span.innerText = remainingText;
+            showTextBtn.remove();
+            text.insertAdjacentElement('beforeend', span);
+            text.style.height = text.scrollHeight + 'px';
+        });
+    });
 }

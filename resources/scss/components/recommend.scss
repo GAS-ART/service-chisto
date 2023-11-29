@@ -1,0 +1,45 @@
+.recommend {
+  @extend %section;
+  &__container {
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @media (max-width: $tablet) {
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item-img {
+    margin-bottom: 25px;
+  }
+
+  &__item-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__item-text {
+    font-size: 16px;
+    line-height: 135%;
+    text-align: justify;
+  }
+}
