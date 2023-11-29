@@ -18,7 +18,7 @@ class DryCleaningController extends SetLangAndViewController
                     'title' => 'dry-cleaning.service.services.1',
                 ],
                 [
-                    'link' => 'dry-cleaning.index',
+                    'link' => 'dry-cleaning.furniture',
                     'img' => 'img/dry-cleaning/2.webp',
                     'title' => 'dry-cleaning.service.services.2',
                 ],
