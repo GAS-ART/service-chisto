@@ -1,6 +1,12 @@
 <div class="recommend">
     <div class="recommend__container">
         <h2 class="recommend__title">@lang($recommend['title'])</h2>
+        @isset($recommend['text'])
+            <p class="recommend__text">@lang($recommend['text'])</p>
+        @endisset
+        @isset($recommend['sub_title'])
+            <h3 class="recommend__sub-title">@lang($recommend['sub_title'])</h3>
+        @endisset
         <div class="recommend__body">
             @foreach ($recommend['content'] as $item)
                 <div class="recommend__item">

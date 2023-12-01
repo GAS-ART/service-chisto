@@ -116,12 +116,14 @@
                                                 </a>
                                             </li>
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('dry-cleaning.carpet', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.dry_cleaning.carpet')</h3>
                                                 </a>
                                             </li>
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('dry-cleaning.floor', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.dry_cleaning.floor')</h3>
                                                 </a>
                                             </li>
@@ -225,12 +227,14 @@
                                     </a>
                                 </li>
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('dry-cleaning.carpet', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.dry_cleaning.carpet')</h3>
                                     </a>
                                 </li>
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('dry-cleaning.floor', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.dry_cleaning.floor')</h3>
                                     </a>
                                 </li>

@@ -7,6 +7,19 @@
     @extend %title;
   }
 
+  &__text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 150%;
+  }
+
+  &__sub-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
   &__body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -27,6 +40,14 @@
 
   &__item-img {
     margin-bottom: 25px;
+    position: relative;
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 182px;
+    object-fit: fill;
+    }
   }
 
   &__item-title {

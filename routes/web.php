@@ -26,4 +26,6 @@ Route::get('/{locale}', [Pages\HomeController::class, 'index'])->name('home');
 
 Route::get('/{locale}/dry-cleaning', [Pages\DryCleaningController::class, 'index'])->name('dry-cleaning.index');
 Route::get('/{locale}/dry-cleaning/furniture', [Pages\DryCleaningController::class, 'furniture'])->name('dry-cleaning.furniture');
+Route::get('/{locale}/dry-cleaning/carpet', [Pages\DryCleaningController::class, 'carpet'])->name('dry-cleaning.carpet');
+Route::get('/{locale}/dry-cleaning/floor', [Pages\DryCleaningController::class, 'floor'])->name('dry-cleaning.floor');
 

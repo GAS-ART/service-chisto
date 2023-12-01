@@ -45,6 +45,15 @@
 
   &__stage-img {
     margin-bottom: 20px;
+    position: relative;
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    }
     @media (max-width: $tablet) {
       margin-bottom: 5px;
     }
