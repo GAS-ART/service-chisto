@@ -106,26 +106,36 @@
                                         class="footer__menu-sub-link">@lang('menu.dry_cleaning.floor')</a></li>
                             </ul>
                         </li>
-                        <li class="footer__menu-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                        <li class="footer__menu-li"><a href="{{ route('window-cleaning.index', __('lang.current')) }}"
                                 class="footer__menu-link">@lang('menu.windows.title')</a>
                             <ul class="footer__menu-sub-list">
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('window-cleaning.facades', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.windows.1')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('window-cleaning.house', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.windows.2')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('window-cleaning.renovation', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.windows.3')</a></li>
                             </ul>
                         </li>
-                        <li class="footer__menu-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                        <li class="footer__menu-li"><a href="{{ route('spring-cleaning.index', __('lang.current')) }}"
                                 class="footer__menu-link">@lang('menu.cleaning.title')</a>
                             <ul class="footer__menu-sub-list">
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('spring-cleaning.apartment', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.cleaning.1')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('spring-cleaning.restaurants', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.cleaning.2')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('spring-cleaning.offices', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.cleaning.3')</a></li>
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('spring-cleaning.industrial', __('lang.current')) }}"
+                                        class="footer__menu-sub-link">@lang('menu.cleaning.4')</a></li>
+
                             </ul>
                         </li>
                         <li class="footer__menu-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"

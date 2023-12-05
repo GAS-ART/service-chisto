@@ -24,8 +24,24 @@ Route::get('/sitemap', [Controllers\SitemapController::class, 'generateSitemap']
 Route::get('/', [Pages\HomeController::class, 'index'])->name('index');
 Route::get('/{locale}', [Pages\HomeController::class, 'index'])->name('home');
 
-Route::get('/{locale}/dry-cleaning', [Pages\DryCleaningController::class, 'index'])->name('dry-cleaning.index');
-Route::get('/{locale}/dry-cleaning/furniture', [Pages\DryCleaningController::class, 'furniture'])->name('dry-cleaning.furniture');
-Route::get('/{locale}/dry-cleaning/carpet', [Pages\DryCleaningController::class, 'carpet'])->name('dry-cleaning.carpet');
-Route::get('/{locale}/dry-cleaning/floor', [Pages\DryCleaningController::class, 'floor'])->name('dry-cleaning.floor');
+Route::prefix('/{locale}/dry-cleaning')->name('dry-cleaning.')->group(function () {
+  Route::get('', [Pages\DryCleaningController::class, 'index'])->name('index');
+  Route::get('furniture', [Pages\DryCleaningController::class, 'furniture'])->name('furniture');
+  Route::get('carpet', [Pages\DryCleaningController::class, 'carpet'])->name('carpet');
+  Route::get('floor', [Pages\DryCleaningController::class, 'floor'])->name('floor');
+});
 
+Route::prefix('/{locale}/window-cleaning')->name('window-cleaning.')->group(function () {
+    Route::get('', [Pages\WindowCleaningController::class, 'index'])->name('index');
+    Route::get('washing-windows-and-facades', [Pages\WindowCleaningController::class, 'facades'])->name('facades');
+    Route::get('house', [Pages\WindowCleaningController::class, 'house'])->name('house');
+    Route::get('after-renovation', [Pages\WindowCleaningController::class, 'renovation'])->name('renovation');
+});
+
+Route::prefix('/{locale}/spring-cleaning')->name('spring-cleaning.')->group(function () {
+    Route::get('', [Pages\SpringCleaningController::class, 'index'])->name('index');
+    Route::get('apartment', [Pages\SpringCleaningController::class, 'apartment'])->name('apartment');
+    Route::get('restaurants-and-shops', [Pages\SpringCleaningController::class, 'restaurants'])->name('restaurants');
+    Route::get('offices', [Pages\SpringCleaningController::class, 'offices'])->name('offices');
+    Route::get('industrial-premises', [Pages\SpringCleaningController::class, 'industrial'])->name('industrial');
+});
