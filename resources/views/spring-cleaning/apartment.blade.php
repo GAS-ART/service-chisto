@@ -6,7 +6,17 @@
 @section('ogDescription', __('titles.spring-cleaning.apartment.ogDescription'))
 
 @section('content')
-    <section style="text-align: center; font-size: 60px; font-weight:700; color: #89368E;" class="test__container">
-        Генеральне прибирання квартир та будинків
-    </section>
+    <x-breadcrumbs>
+        <x-slot name="link">spring-cleaning</x-slot>
+        <x-slot name="main">@lang('spring-cleaning.apartment.breadcrumbs.main_page')</x-slot>
+        <x-slot name="current">@lang('spring-cleaning.apartment.breadcrumbs.current_page')</x-slot>
+    </x-breadcrumbs>
+    <x-service-banner :$banner />
+    <x-stages :$stages />
+    <x-recommend :$recommend />
+    <x-four-advantages :$fourAdvantages />
+    <x-type-clients :$typeClients />
+    <x-lead>
+        margin: 0;
+    </x-lead>
 @endsection

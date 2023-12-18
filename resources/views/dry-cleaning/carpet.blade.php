@@ -7,6 +7,7 @@
 
 @section('content')
     <x-breadcrumbs>
+        <x-slot name="link">dry-cleaning</x-slot>
         <x-slot name="main">@lang('dry-cleaning.carpet.breadcrumbs.main_page')</x-slot>
         <x-slot name="current">@lang('dry-cleaning.carpet.breadcrumbs.current_page')</x-slot>
     </x-breadcrumbs>

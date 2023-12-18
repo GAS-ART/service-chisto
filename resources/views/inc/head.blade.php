@@ -17,7 +17,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:title" content="@yield('ogTitle')" />
         <meta property="og:description" content="@yield('ogDescription')" />
-        <meta property="og:site_name" content="med.com" />
+        <meta property="og:site_name" content="service-chisto.com.ua" />
         {{-- <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/> --}}
         <style>
         </style>
