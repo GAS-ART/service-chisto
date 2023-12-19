@@ -95,7 +95,6 @@ class SpringCleaningController extends SetLangAndViewController
     public function apartment ($locale){
         $banner = [
             'img' => 'img/spring_cleaning/apartment/1.webp',
-            'img_mobile' => 'img/spring-cleaning/apartment/banner_m.webp',
             'title' => 'spring-cleaning.apartment.title',
         ];
 
@@ -128,7 +127,38 @@ class SpringCleaningController extends SetLangAndViewController
     }
 
     public function restaurants ($locale){
-        return $this->setLocaleAndView($locale, 'spring-cleaning.restaurants', []);
+
+        $banner = [
+            'img' => 'img/spring_cleaning/restaurants/banner.webp',
+            'title' => 'spring-cleaning.restaurants.title',
+        ];
+
+        $stages = [
+            'title' => 'spring-cleaning.restaurants.stages.title',
+            'text' => 'spring-cleaning.restaurants.stages.text',
+            'content' => [],
+        ];
+        for($i=1; $i<9; $i++){
+            $stages['content']["stage_$i"] = ['img' => "img/spring_cleaning/restaurants/stages/$i.webp",'title' => "spring-cleaning.restaurants.stages.stage_$i.title", 'text' =>"spring-cleaning.restaurants.stages.stage_$i.text"]; 
+        }
+
+        $recommend = ['title' => 'spring-cleaning.restaurants.recommend.title', 'content' => []];
+        for ($i=1; $i < 4; $i++) { 
+            $recommend['content']["item_$i"] = ['img' => "img/spring_cleaning/restaurants/recommend/$i.webp",'title' => "spring-cleaning.restaurants.recommend.item_$i.title", 'text' => "spring-cleaning.restaurants.recommend.item_$i.text"];
+        }
+
+        $fourAdvantages = ['spring-cleaning.restaurants.four_advantages.title'];
+        for ($i=1; $i < 5; $i++) { 
+            $fourAdvantages[] = "spring-cleaning.restaurants.four_advantages.$i";
+            $fourAdvantages[] = "spring-cleaning.restaurants.four_advantages.0$i";
+        }
+
+        $typeClients = ['title' => 'spring-cleaning.restaurants.clients.title', 'content' => []];
+        for ($i=1; $i < 5; $i++) { 
+            $typeClients['content']["client_$i"] = ['img' => "img/spring_cleaning/restaurants/clients/$i.webp",'title' => "spring-cleaning.restaurants.clients.client_$i.title", 'text' => "spring-cleaning.restaurants.clients.client_$i.text"];
+        }
+
+        return $this->setLocaleAndView($locale, 'spring-cleaning.restaurants', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients'));
     }
 
     public function offices ($locale){
