@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     max-width: 1920px;
-    @include adaptiveValueREM('height', 700, 180, 1920, 360, 1);//780
+    @include adaptiveValueREM('height', 900, 180, 1920, 360, 1);//700, 780
     object-fit: cover ;
     margin: 0 auto;
     }
