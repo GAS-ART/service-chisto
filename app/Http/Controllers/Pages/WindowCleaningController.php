@@ -92,7 +92,38 @@ class WindowCleaningController extends SetLangAndViewController
     }
 
     public function facades ($locale){
-        return $this->setLocaleAndView($locale, 'window-cleaning.facades', []);
+
+        $banner = [
+            'img' => 'img/windows/facades/banner.webp',
+            'title' => 'windows.facades.title',
+        ];
+
+        $stages = [
+            'title' => 'windows.facades.stages.title',
+            'text' => 'windows.facades.stages.text',
+            'content' => [],
+        ];
+        for($i=1; $i<8; $i++){
+            $stages['content']["stage_$i"] = ['img' => "img/windows/facades/stages/$i.webp",'title' => "windows.facades.stages.stage_$i.title", 'text' =>"windows.facades.stages.stage_$i.text"]; 
+        }
+
+        $recommend = ['title' => 'windows.facades.recommend.title', 'content' => []];
+        for ($i=1; $i < 4; $i++) { 
+            $recommend['content']["item_$i"] = ['img' => "img/windows/facades/recommend/$i.webp",'title' => "windows.facades.recommend.item_$i.title", 'text' => "windows.facades.recommend.item_$i.text"];
+        }
+
+        $fourAdvantages = ['windows.facades.four_advantages.title'];
+        for ($i=1; $i < 5; $i++) { 
+            $fourAdvantages[] = "windows.facades.four_advantages.$i";
+            $fourAdvantages[] = "windows.facades.four_advantages.0$i";
+        }
+
+        $typeClients = ['title' => 'windows.facades.clients.title', 'content' => []];
+        for ($i=1; $i < 7; $i++) { 
+            $typeClients['content']["client_$i"] = ['img' => "img/windows/facades/clients/$i.webp",'title' => "windows.facades.clients.client_$i.title", 'text' => "windows.facades.clients.client_$i.text"];
+        }
+
+        return $this->setLocaleAndView($locale, 'window-cleaning.facades', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients'));
     }
 
     public function house ($locale){

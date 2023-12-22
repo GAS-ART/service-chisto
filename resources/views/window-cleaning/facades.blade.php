@@ -6,7 +6,17 @@
 @section('ogDescription', __('titles.window-cleaning.facades.ogDescription'))
 
 @section('content')
-    <section style="text-align: center; font-size: 60px; font-weight:700; color: #89368E;" class="test__container">
-        Мийка вікон та фасадів
-    </section>
+    <x-breadcrumbs>
+        <x-slot name="link">window-cleaning</x-slot>
+        <x-slot name="main">@lang('windows.facades.breadcrumbs.main_page')</x-slot>
+        <x-slot name="current">@lang('windows.facades.breadcrumbs.current_page')</x-slot>
+    </x-breadcrumbs>
+    <x-service-banner :$banner />
+    <x-stages :$stages />
+    <x-recommend :$recommend />
+    <x-four-advantages :$fourAdvantages />
+    <x-type-clients :$typeClients />
+    <x-lead>
+        margin: 0;
+    </x-lead>
 @endsection
