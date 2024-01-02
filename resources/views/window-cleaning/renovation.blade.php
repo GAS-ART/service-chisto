@@ -6,7 +6,10 @@
 @section('ogDescription', __('titles.window-cleaning.renovation.ogDescription'))
 
 @section('content')
-    <section style="text-align: center; font-size: 60px; font-weight:700; color: #89368E;" class="test__container">
-        Мийка вікон після ремонту
-    </section>
+    <x-breadcrumbs>
+        <x-slot name="link">window-cleaning</x-slot>
+        <x-slot name="main">@lang('windows.renovation.breadcrumbs.main_page')</x-slot>
+        <x-slot name="current">@lang('windows.renovation.breadcrumbs.current_page')</x-slot>
+    </x-breadcrumbs>
+    <x-service-banner :$banner />
 @endsection

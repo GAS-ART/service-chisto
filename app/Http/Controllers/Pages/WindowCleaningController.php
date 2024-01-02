@@ -127,10 +127,46 @@ class WindowCleaningController extends SetLangAndViewController
     }
 
     public function house ($locale){
-        return $this->setLocaleAndView($locale, 'window-cleaning.house', []);
+
+        $banner = [
+            'img' => 'img/windows/house/banner.webp',
+            'title' => 'windows.house.title',
+        ];
+
+        $stages = [
+            'title' => 'windows.house.stages.title',
+            'text' => 'windows.house.stages.text',
+            'content' => [],
+        ];
+        for($i=1; $i<9; $i++){
+            $stages['content']["stage_$i"] = ['img' => "img/windows/house/stages/$i.webp",'title' => "windows.house.stages.stage_$i.title", 'text' =>"windows.house.stages.stage_$i.text"]; 
+        }
+
+        $recommend = ['title' => 'windows.house.recommend.title', 'content' => []];
+        for ($i=1; $i < 4; $i++) { 
+            $recommend['content']["item_$i"] = ['img' => "img/windows/house/recommend/$i.webp",'title' => "windows.house.recommend.item_$i.title", 'text' => "windows.house.recommend.item_$i.text"];
+        }
+
+        $fourAdvantages = ['windows.house.four_advantages.title'];
+        for ($i=1; $i < 5; $i++) { 
+            $fourAdvantages[] = "windows.house.four_advantages.$i";
+            $fourAdvantages[] = "windows.house.four_advantages.0$i";
+        }
+
+        $typeClients = ['title' => 'windows.house.clients.title', 'content' => []];
+        for ($i=1; $i < 7; $i++) { 
+            $typeClients['content']["client_$i"] = ['img' => "img/windows/house/clients/$i.webp",'title' => "windows.house.clients.client_$i.title", 'text' => "windows.house.clients.client_$i.text"];
+        }
+
+
+        return $this->setLocaleAndView($locale, 'window-cleaning.house', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients'));
     }
 
     public function renovation ($locale){
-        return $this->setLocaleAndView($locale, 'window-cleaning.renovation', []);
+        $banner = [
+            'img' => 'img/windows/renovation/banner.webp',
+            'title' => 'windows.renovation.title',
+        ];
+        return $this->setLocaleAndView($locale, 'window-cleaning.renovation', compact('banner'));
     }
 }
