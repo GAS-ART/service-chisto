@@ -24,7 +24,7 @@ class RenavationController extends SetLangAndViewController
                 [
                     'link' => 'renovation.industrial',
                     'img' => 'img/renovation/3.webp',
-                    'title' => 'renovation.service.services.4',
+                    'title' => 'renovation.service.services.3',
                 ],
             ],
         ];
