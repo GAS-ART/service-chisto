@@ -4,7 +4,7 @@
   &.save-top{
     margin-top: 110px;
   }
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     margin-top: 56px;
   }
 /*   @media (max-width: $mobile) {
@@ -37,7 +37,7 @@
   }
 
   &__menu {
-    @media (max-width: $tablet) {
+    @media (max-width: em(1350)) {
       display: none;
     } 
   }
@@ -100,7 +100,7 @@
     position: relative;
     z-index: 2;
   }
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     display: block;
   }
 }
@@ -164,7 +164,7 @@
   }
 }
 .social-header {
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     flex: 1 1 auto;
   }
   @media (max-width: $mobile) {
@@ -237,7 +237,7 @@
     }
     cursor: pointer;
   }
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     display: none;
   }
 }
@@ -334,7 +334,10 @@
         pointer-events: all;
       }
     }
-    @media (max-width: $tablet) {
+    &.no-pointer{
+      cursor: default;
+    }
+    @media (max-width: em(1350)) {
       text-align: center;
     }
   }
@@ -403,7 +406,7 @@
   height: 14px;
   cursor: pointer;
   display: none;
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     display: block;
   }
   &:before {
@@ -495,7 +498,7 @@
   &.active{
     transform: translateX(0vw);
   }
-  @media (max-width: $tablet) {
+  @media (max-width: em(1350)) {
     display: block;
     text-align: center;
   }

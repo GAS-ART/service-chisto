@@ -138,19 +138,30 @@
 
                             </ul>
                         </li>
-                        <li class="footer__menu-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                        <li class="footer__menu-li"><a href="{{ route('renovation.index', __('lang.current')) }}"
                                 class="footer__menu-link">@lang('menu.renovation.title')</a>
                             <ul class="footer__menu-sub-list">
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('renovation.apartment', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.renovation.1')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('renovation.offices', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.renovation.2')</a></li>
-                                <li class="footer__menu-sub-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('renovation.industrial', __('lang.current')) }}"
                                         class="footer__menu-sub-link">@lang('menu.renovation.3')</a></li>
                             </ul>
                         </li>
-                        <li class="footer__menu-li"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
-                                class="footer__menu-link">@lang('menu.extreme')</a></li>
+                        <li class="footer__menu-li">
+                            <div class="footer__menu-link">@lang('menu.extreme.title')</div>
+                            <ul class="footer__menu-sub-list">
+                                <li class="footer__menu-sub-li"><a href="{{ route('extreme.fire', __('lang.current')) }}"
+                                        class="footer__menu-sub-link">@lang('menu.extreme.1')</a></li>
+                                <li class="footer__menu-sub-li"><a
+                                        href="{{ route('extreme.cases', __('lang.current')) }}"
+                                        class="footer__menu-sub-link">@lang('menu.extreme.2')</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -45,3 +45,15 @@ Route::prefix('/{locale}/spring-cleaning')->name('spring-cleaning.')->group(func
     Route::get('offices', [Pages\SpringCleaningController::class, 'offices'])->name('offices');
     Route::get('industrial-premises', [Pages\SpringCleaningController::class, 'industrial'])->name('industrial');
 });
+
+Route::prefix('/{locale}/cleaning-after-renovation')->name('renovation.')->group(function () {
+  Route::get('', [Pages\RenavationController::class, 'index'])->name('index');
+  Route::get('apartment-and-houses', [Pages\RenavationController::class, 'apartment'])->name('apartment');
+  Route::get('offices', [Pages\RenavationController::class, 'offices'])->name('offices');
+  Route::get('Industrial-premises', [Pages\RenavationController::class, 'industrial'])->name('industrial');
+});
+
+Route::prefix('/{locale}/extreme-cleaning')->name('extreme.')->group(function () {
+  Route::get('after-fire', [Pages\ExtremeCleaningController::class, 'fire'])->name('fire');
+  Route::get('other-cases', [Pages\ExtremeCleaningController::class, 'cases'])->name('cases');
+});

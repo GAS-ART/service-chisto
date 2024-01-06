@@ -187,32 +187,51 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-header__item"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                                    <li class="menu-header__item"><a
+                                            href="{{ route('renovation.index', __('lang.current')) }}"
                                             class="menu-header__list-link">
                                             <h2>@lang('menu.renovation.title')</h2>
                                         </a>
                                         <ul class="menu-header__sub-list">
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('renovation.apartment', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.renovation.1')</h3>
                                                 </a>
                                             </li>
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('renovation.offices', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.renovation.2')</h3>
                                                 </a>
                                             </li>
                                             <li class="menu-header__sub-item">
-                                                <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="menu-header__sub-link">
+                                                <a href="{{ route('renovation.industrial', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
                                                     <h3>@lang('menu.renovation.3')</h3>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-header__item"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
-                                            class="menu-header__list-link">
-                                            <h2>@lang('menu.extreme')</h2>
-                                        </a></li>
+                                    <li class="menu-header__item no-pointer">
+                                        <div class="menu-header__list-link">
+                                            <h2>@lang('menu.extreme.title')</h2>
+                                        </div>
+                                        <ul class="menu-header__sub-list">
+                                            <li class="menu-header__sub-item">
+                                                <a href="{{ route('extreme.fire', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
+                                                    <h3>@lang('menu.extreme.1')</h3>
+                                                </a>
+                                            </li>
+                                            <li class="menu-header__sub-item">
+                                                <a href="{{ route('extreme.cases', __('lang.current')) }}"
+                                                    class="menu-header__sub-link">
+                                                    <h3>@lang('menu.extreme.2')</h3>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -312,32 +331,51 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="burger-menu-header__item"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
+                        <li class="burger-menu-header__item"><a
+                                href="{{ route('renovation.index', __('lang.current')) }}"
                                 class="burger-menu-header__list-link">
                                 <h2>@lang('menu.renovation.title')</h2>
                             </a>
                             <ul class="burger-menu-header__sub-list">
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('renovation.apartment', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.renovation.1')</h3>
                                     </a>
                                 </li>
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('renovation.offices', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.renovation.2')</h3>
                                     </a>
                                 </li>
                                 <li class="burger-menu-header__sub-item">
-                                    <a href="#{{-- {{ route('', __('lang.current')) }} --}}" class="burger-menu-header__sub-link">
+                                    <a href="{{ route('renovation.industrial', __('lang.current')) }}"
+                                        class="burger-menu-header__sub-link">
                                         <h3>@lang('menu.renovation.3')</h3>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="burger-menu-header__item"><a href="#{{-- {{ route('', __('lang.current')) }} --}}"
-                                class="burger-menu-header__list-link">
-                                <h2>@lang('menu.extreme')</h2>
-                            </a></li>
+                        <li class="burger-menu-header__item">
+                            <div class="burger-menu-header__list-link">
+                                <h2>@lang('menu.extreme.title')</h2>
+                            </div>
+                            <ul class="burger-menu-header__sub-list">
+                                <li class="burger-menu-header__sub-item">
+                                    <a href="{{ route('extreme.fire', __('lang.current')) }}"
+                                        class="menu-header__sub-link">
+                                        <h3>@lang('menu.extreme.1')</h3>
+                                    </a>
+                                </li>
+                                <li class="burger-menu-header__sub-item">
+                                    <a href="{{ route('extreme.cases', __('lang.current')) }}"
+                                        class="menu-header__sub-link">
+                                        <h3>@lang('menu.extreme.2')</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header-contacts__body burger-lang @lang('lang.current')">

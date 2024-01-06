@@ -8,7 +8,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       flex-direction: column;
       align-items: center;
     }
@@ -18,7 +18,7 @@
   }
 
   &__contatcs {
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       min-width: 200px;
     }
     @media (max-width: $mobileSmall) {
@@ -27,7 +27,7 @@
   }
 
   &__contatcs-body {
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       margin-bottom: 40px;
     }
   }
@@ -57,7 +57,7 @@
         }
       }
     }
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       text-align: center;
     }
     @media (max-width: $mobileSmall) {
@@ -85,7 +85,7 @@
       position: relative;
       z-index: 2;
     }
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       &::before{
         left: 56px;
       }
@@ -176,7 +176,7 @@
   }
 
   &__menu {
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       min-width: 200px;
     }
   }
@@ -184,7 +184,7 @@
   &__menu-list {
     display: flex;
     align-items: baseline;
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -214,7 +214,7 @@
         border-color: $darkPink;
       }
     }
-    @media (max-width: $tablet) {
+    @media (max-width: em(1200)) {
       
       &:not(:last-child){
         margin-right: 0;
