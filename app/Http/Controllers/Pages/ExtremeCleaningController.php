@@ -18,7 +18,7 @@ class ExtremeCleaningController extends SetLangAndViewController
             'text' => 'extreme-cleaning.fire.stages.text',
             'content' => [],
         ];
-        for($i=1; $i<7; $i++){
+        for($i=1; $i<11; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/extreme_cleaning/fire/stages/$i.webp",'title' => "extreme-cleaning.fire.stages.stage_$i.title", 'text' =>"extreme-cleaning.fire.stages.stage_$i.text"]; 
         }
 
@@ -53,7 +53,7 @@ class ExtremeCleaningController extends SetLangAndViewController
             'text' => 'extreme-cleaning.cases.stages.text',
             'content' => [],
         ];
-        for($i=1; $i<9; $i++){
+        for($i=1; $i<7; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/extreme_cleaning/cases/stages/$i.webp",'title' => "extreme-cleaning.cases.stages.stage_$i.title", 'text' =>"extreme-cleaning.cases.stages.stage_$i.text"]; 
         }
 
@@ -69,7 +69,7 @@ class ExtremeCleaningController extends SetLangAndViewController
         }
 
         $typeClients = ['title' => 'extreme-cleaning.cases.clients.title', 'content' => []];
-        for ($i=1; $i < 4; $i++) { 
+        for ($i=1; $i < 7; $i++) { 
             $typeClients['content']["client_$i"] = ['img' => "img/extreme_cleaning/cases/clients/$i.webp",'title' => "extreme-cleaning.cases.clients.client_$i.title", 'text' => "extreme-cleaning.cases.clients.client_$i.text"];
         }
 

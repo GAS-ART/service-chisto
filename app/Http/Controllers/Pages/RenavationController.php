@@ -98,7 +98,7 @@ class RenavationController extends SetLangAndViewController
             'text' => 'renovation.apartment.stages.text',
             'content' => [],
         ];
-        for($i=1; $i<7; $i++){
+        for($i=1; $i<9; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/renovation/apartment/stages/$i.webp",'title' => "renovation.apartment.stages.stage_$i.title", 'text' =>"renovation.apartment.stages.stage_$i.text"]; 
         }
 
@@ -133,7 +133,7 @@ class RenavationController extends SetLangAndViewController
             'text' => 'renovation.offices.stages.text',
             'content' => [],
         ];
-        for($i=1; $i<9; $i++){
+        for($i=1; $i<7; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/renovation/offices/stages/$i.webp",'title' => "renovation.offices.stages.stage_$i.title", 'text' =>"renovation.offices.stages.stage_$i.text"]; 
         }
 
@@ -149,7 +149,7 @@ class RenavationController extends SetLangAndViewController
         }
 
         $typeClients = ['title' => 'renovation.offices.clients.title', 'content' => []];
-        for ($i=1; $i < 4; $i++) { 
+        for ($i=1; $i < 7; $i++) { 
             $typeClients['content']["client_$i"] = ['img' => "img/renovation/offices/clients/$i.webp",'title' => "renovation.offices.clients.client_$i.title", 'text' => "renovation.offices.clients.client_$i.text"];
         }
 
@@ -168,7 +168,7 @@ class RenavationController extends SetLangAndViewController
             'text' => 'renovation.industrial.stages.text',
             'content' => [],
         ];
-        for($i=1; $i<9; $i++){
+        for($i=1; $i<8; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/renovation/industrial/stages/$i.webp",'title' => "renovation.industrial.stages.stage_$i.title", 'text' =>"renovation.industrial.stages.stage_$i.text"]; 
         }
 

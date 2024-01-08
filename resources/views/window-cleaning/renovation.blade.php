@@ -12,4 +12,11 @@
         <x-slot name="current">@lang('windows.renovation.breadcrumbs.current_page')</x-slot>
     </x-breadcrumbs>
     <x-service-banner :$banner />
+    <x-stages :$stages />
+    <x-recommend :$recommend />
+    <x-four-advantages :$fourAdvantages />
+    <x-type-clients :$typeClients />
+    <x-lead>
+        margin: 0;
+    </x-lead>
 @endsection

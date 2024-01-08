@@ -167,6 +167,32 @@ class WindowCleaningController extends SetLangAndViewController
             'img' => 'img/windows/renovation/banner.webp',
             'title' => 'windows.renovation.title',
         ];
-        return $this->setLocaleAndView($locale, 'window-cleaning.renovation', compact('banner'));
+
+        $stages = [
+            'title' => 'windows.renovation.stages.title',
+            'text' => 'windows.renovation.stages.text',
+            'content' => [],
+        ];
+        for($i=1; $i<9; $i++){
+            $stages['content']["stage_$i"] = ['img' => "img/windows/renovation/stages/$i.webp",'title' => "windows.renovation.stages.stage_$i.title", 'text' =>"windows.renovation.stages.stage_$i.text"]; 
+        }
+
+        $recommend = ['title' => 'windows.renovation.recommend.title', 'content' => []];
+        for ($i=1; $i < 4; $i++) { 
+            $recommend['content']["item_$i"] = ['img' => "img/windows/renovation/recommend/$i.webp",'title' => "windows.renovation.recommend.item_$i.title", 'text' => "windows.renovation.recommend.item_$i.text"];
+        }
+
+        $fourAdvantages = ['windows.renovation.four_advantages.title'];
+        for ($i=1; $i < 5; $i++) { 
+            $fourAdvantages[] = "windows.renovation.four_advantages.$i";
+            $fourAdvantages[] = "windows.renovation.four_advantages.0$i";
+        }
+
+        $typeClients = ['title' => 'windows.renovation.clients.title', 'content' => []];
+        for ($i=1; $i < 7; $i++) { 
+            $typeClients['content']["client_$i"] = ['img' => "img/windows/renovation/clients/$i.webp",'title' => "windows.renovation.clients.client_$i.title", 'text' => "windows.renovation.clients.client_$i.text"];
+        }
+
+        return $this->setLocaleAndView($locale, 'window-cleaning.renovation', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients'));
     }
 }

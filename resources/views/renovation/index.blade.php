@@ -12,9 +12,8 @@
         <x-slot name="text">@lang('renovation.text')</x-slot>
     </x-service-text>
     <x-lead />
-    {{-- <x-cases :$cases />
     <x-four-advantages :$fourAdvantages />
     <x-why-we :$whyWe />
     <x-questions :$questions />
-    <x-slider :$slider /> --}}
+    <x-slider :$slider />
 @endsection
