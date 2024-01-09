@@ -11,6 +11,10 @@
                 </div>
             @endforeach
         </div>
+        @isset($stages['notice_title'])
+            <h2 class="stages__title mb-1">@lang($stages['notice_title'])</h2>
+            <p>@lang($stages['notice_text'])</p>
+        @endisset
         <button class="advantages__show-more show-more-btn show-more-btn-color">@lang('home.advantages.show_more')</button>
     </div>
 </div>

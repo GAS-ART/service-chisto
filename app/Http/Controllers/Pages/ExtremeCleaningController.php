@@ -16,9 +16,11 @@ class ExtremeCleaningController extends SetLangAndViewController
         $stages = [
             'title' => 'extreme-cleaning.fire.stages.title',
             'text' => 'extreme-cleaning.fire.stages.text',
+            'notice_title' => 'extreme-cleaning.fire.stages.notice.title',
+            'notice_text' => 'extreme-cleaning.fire.stages.notice.text',
             'content' => [],
         ];
-        for($i=1; $i<11; $i++){
+        for($i=1; $i<8; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/extreme_cleaning/fire/stages/$i.webp",'title' => "extreme-cleaning.fire.stages.stage_$i.title", 'text' =>"extreme-cleaning.fire.stages.stage_$i.text"]; 
         }
 
@@ -38,7 +40,15 @@ class ExtremeCleaningController extends SetLangAndViewController
             $typeClients['content']["client_$i"] = ['img' => "img/extreme_cleaning/fire/clients/$i.webp",'title' => "extreme-cleaning.fire.clients.client_$i.title", 'text' => "extreme-cleaning.fire.clients.client_$i.text"];
         }
 
-        return $this->setLocaleAndView($locale, 'extreme-cleaning.fire', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients'));
+        $slider = [];
+        for ($i=1; $i <= 5; $i++) { 
+            $slider[] = "img/spring_cleaning/slider/$i.webp";
+            $slider[] = "img/spring_cleaning/slider/${i}_ok.webp";
+            $slider[] = "spring-cleaning.slider.slide_$i.name";
+            $slider[] = "spring-cleaning.slider.slide_$i.review";
+        }
+
+        return $this->setLocaleAndView($locale, 'extreme-cleaning.fire', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients', 'slider'));
     }
 
     public function cases ($locale){

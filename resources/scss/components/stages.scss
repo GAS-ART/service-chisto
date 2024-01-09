@@ -5,6 +5,9 @@
 
   &__title {
     @extend %title;
+    &.mb-1{
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -29,6 +32,7 @@
     column-gap: 105px;
     @include adaptiveValueREM('column-gap', 105, 25, 1440, 768, 1);
     justify-content: center;
+    margin-bottom: 25px;
     @media (max-width: $mobile) {
       grid-template-columns: 310px;
       overflow: hidden;
