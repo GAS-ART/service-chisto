@@ -94,7 +94,7 @@ window.onload = function () {
     const styleTag = document.querySelector("head style");
     const caseItem = document.querySelector('.cases__item');
 
-    if(caseItem){
+    if(caseItem ){
         styleTag.innerHTML = `:root {--case-item-height: ${caseItem.clientHeight}px;}`;
     }
 

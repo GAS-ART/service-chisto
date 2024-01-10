@@ -32,6 +32,9 @@
   &__title {
     @extend %title;
     @include adaptiveValueREM('font-size', 40,28,1440,360,1);
+    background-color: rgba(66, 66, 66, 0.4);
+    padding: 10px;
+    border-radius: 5px;
   }
 }
 

@@ -82,9 +82,9 @@ class SpringCleaningController extends SetLangAndViewController
         }
 
         $slider = [];
-        for ($i=1; $i <= 5; $i++) { 
-            $slider[] = "img/spring_cleaning/slider/$i.webp";
-            $slider[] = "img/spring_cleaning/slider/${i}_ok.webp";
+        for ($i=1; $i <= 21; $i++) { 
+            $slider[] = "img/spring_cleaning/slider/$i-1.webp";
+            $slider[] = "img/spring_cleaning/slider/$i-2.webp";
             $slider[] = "spring-cleaning.slider.slide_$i.name";
             $slider[] = "spring-cleaning.slider.slide_$i.review";
         }

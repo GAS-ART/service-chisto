@@ -81,9 +81,9 @@ class WindowCleaningController extends SetLangAndViewController
         }
 
         $slider = [];
-        for ($i=1; $i <= 5; $i++) { 
-            $slider[] = "img/windows/slider/$i.webp";
-            $slider[] = "img/windows/slider/${i}_ok.webp";
+        for ($i=1; $i <= 10; $i++) { 
+            $slider[] = "img/windows/slider/$i-1.webp";
+            $slider[] = "img/windows/slider/$i-2.webp";
             $slider[] = "windows.slider.slide_$i.name";
             $slider[] = "windows.slider.slide_$i.review";
         }

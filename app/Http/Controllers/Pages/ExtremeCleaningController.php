@@ -41,11 +41,11 @@ class ExtremeCleaningController extends SetLangAndViewController
         }
 
         $slider = [];
-        for ($i=1; $i <= 5; $i++) { 
-            $slider[] = "img/spring_cleaning/slider/$i.webp";
-            $slider[] = "img/spring_cleaning/slider/${i}_ok.webp";
-            $slider[] = "spring-cleaning.slider.slide_$i.name";
-            $slider[] = "spring-cleaning.slider.slide_$i.review";
+        for ($i=1; $i <= 13; $i++) { 
+            $slider[] = "img/extreme_cleaning/fire/slider/$i-1.webp";
+            $slider[] = "img/extreme_cleaning/fire/slider/$i-2.webp";
+            $slider[] = "extreme-cleaning.fire.slider.slide_$i.name";
+            $slider[] = "extreme-cleaning.fire.slider.slide_$i.review";
         }
 
         return $this->setLocaleAndView($locale, 'extreme-cleaning.fire', compact('banner', 'stages', 'recommend', 'fourAdvantages', 'typeClients', 'slider'));

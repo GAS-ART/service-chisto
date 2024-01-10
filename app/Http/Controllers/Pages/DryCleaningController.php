@@ -78,9 +78,9 @@ class DryCleaningController extends SetLangAndViewController
         }
 
         $slider = [];
-        for ($i=1; $i <= 5; $i++) { 
-            $slider[] = "img/dry-cleaning/slider/$i.webp";
-            $slider[] = "img/dry-cleaning/slider/${i}_ok.webp";
+        for ($i=1; $i <= 20; $i++) { 
+            $slider[] = "img/dry-cleaning/slider/$i-1.webp";
+            $slider[] = "img/dry-cleaning/slider/$i-2.webp";
             $slider[] = "dry-cleaning.slider.slide_$i.name";
             $slider[] = "dry-cleaning.slider.slide_$i.review";
         }

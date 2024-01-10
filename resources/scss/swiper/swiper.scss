@@ -193,7 +193,15 @@ swiper-slide {
 }
 
 .swiper-lazy-preloader {
-  width: 42px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+  &::before{
+    content: '';
+    width: 42px;
   height: 42px;
   position: absolute;
   left: 50%;
@@ -206,7 +214,14 @@ swiper-slide {
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
   border-radius: 50%;
   border-top-color: transparent;
-}
+  }
+ /*  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;*/
+} 
 .swiper:not(.swiper-watch-progress),
 swiper-container:not(.swiper-watch-progress),
 .swiper-watch-progress .swiper-slide-visible {

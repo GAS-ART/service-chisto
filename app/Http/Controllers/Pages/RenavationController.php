@@ -77,9 +77,9 @@ class RenavationController extends SetLangAndViewController
         }
 
         $slider = [];
-        for ($i=1; $i <= 5; $i++) { 
-            $slider[] = "img/renovation/slider/$i.webp";
-            $slider[] = "img/renovation/slider/${i}_ok.webp";
+        for ($i=1; $i <= 12; $i++) { 
+            $slider[] = "img/renovation/slider/$i-1.webp";
+            $slider[] = "img/renovation/slider/$i-2.webp";
             $slider[] = "renovation.slider.slide_$i.name";
             $slider[] = "renovation.slider.slide_$i.review";
         }

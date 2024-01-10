@@ -34,6 +34,8 @@
                             <img src="{{ asset('img/logo.png') }}" alt="">
                         </div>
 
+                        {{-- <div class="swiper-lazy-preloader"></div> --}}
+
                     </div>
                 @endfor
             </div>
