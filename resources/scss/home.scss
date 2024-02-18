@@ -563,6 +563,7 @@
 
 .advantages {
     @extend %section;
+    font-size: 16px;
 
     &__container {
     }
@@ -667,6 +668,7 @@
 
 .price {
     @extend %section;
+    font-size: 16px;
 
     &__container {
         position: relative;

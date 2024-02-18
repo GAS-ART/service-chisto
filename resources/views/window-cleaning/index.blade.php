@@ -8,8 +8,8 @@
 @section('content')
     <x-service :$services />
     <x-service-text>
-        <x-slot name="title">@lang('spring-cleaning.title')</x-slot>
-        <x-slot name="text">@lang('spring-cleaning.text')</x-slot>
+        <x-slot name="title">@lang('windows.title')</x-slot>
+        <x-slot name="text">@lang('windows.text')</x-slot>
     </x-service-text>
     <x-lead />
     <x-cases :$cases />
