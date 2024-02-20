@@ -1680,25 +1680,21 @@
                             alt=""></div>
                     <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/3.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/4.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/5.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/6.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/7.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/8.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/9.webp') }}"
                             alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
-                            alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/1.webp') }}"
-                            alt=""></div>
-                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/2.webp') }}"
+                    <div class="clients__slider-slide swiper-slide"><img src="{{ asset('img/home/clients/10.webp') }}"
                             alt=""></div>
                 </div>
 
