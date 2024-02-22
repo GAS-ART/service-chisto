@@ -1610,14 +1610,6 @@
                     </div>
                     <h3 class="works__sub-title">@lang('home.works.types.11')</h3>
                 </div>
-                <div class="works__item">
-                    <div class="works__img">
-                        <img src="{{ asset('img/home/works/12.webp') }}" alt="@lang('home.works.types.12')">
-                        <button class="works__btn link-on-popup" data-popup="popup"
-                            type="button">@lang('home.works.btn')</button>
-                    </div>
-                    <h3 class="works__sub-title">@lang('home.works.types.12')</h3>
-                </div>
             </div>
             <button class="advantages__show-more show-more-btn">@lang('home.advantages.show_more')</button>
         </div>

@@ -817,6 +817,23 @@
     &__item {
         position: relative;
         text-align: center;
+        &:last-child{
+            grid-column: 3;
+            transform: translateX(-50%);
+            @media (max-width: $tablet) {
+                grid-column: 2;
+            }
+            @media (max-width: $mobile) {
+                grid-column: 1;
+                transform: translateX(0%);
+            }
+        }
+        &:nth-child(10){
+            transform: translateX(50%);
+            @media (max-width: $tablet) {
+                transform: translateX(0%);
+            }
+        }
     }
 
     &__img {
