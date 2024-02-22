@@ -64,14 +64,14 @@
     left: 50%;
     bottom: 0px;
     transform: translateX(-50%);
-    background-color: #ffffff;
+    //background-color: #ffffff;
     img {
     position: relative;
     top: 0;
     left: 0;
     width: 242px;
     height: 137.5px;
-    object-fit: contain;
+    object-fit: cover;
     @media (max-width: $tablet) {
       width: calc(242px / 2) ;
       height: calc(137.5px / 2);

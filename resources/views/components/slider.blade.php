@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="slide__logo">
-                            <img src="{{ asset('img/logo.png') }}" alt="">
+                            <img src="{{ asset('img/logo1.png') }}" alt="">
                         </div>
 
                         {{-- <div class="swiper-lazy-preloader"></div> --}}
