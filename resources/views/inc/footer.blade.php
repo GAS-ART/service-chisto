@@ -10,7 +10,7 @@
                             </a>
                         </div>
                         <div class="footer__contatcs-item footer__contatcs-phone">
-                            <a href="tel:%2B0{{ __('contacts.phone_link') }}">
+                            <a href="tel:%2B0{{ __('contacts.phone_link') }}" class="conversion">
                                 <svg class="footer__contacts-icon" xmlns="http://www.w3.org/2000/svg" width="18"
                                     height="18" viewBox="0 0 18 18" fill="none">
                                     <path
@@ -18,10 +18,10 @@
                                         fill="#FFFFFF" />
                                 </svg>
                             </a>
-                            <a href="tel:%2B0{{ __('contacts.phone_link') }}">@lang('contacts.phone')</a>
+                            <a href="tel:%2B0{{ __('contacts.phone_link') }}" class="conversion">@lang('contacts.phone')</a>
                         </div>
                         <div class="footer__contatcs-social">
-                            <a href="@lang('contacts.instagram')" class="footer__contatcs-social-item">
+                            <a href="@lang('contacts.instagram')" class="footer__contatcs-social-item conversion">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -35,7 +35,7 @@
                                         fill="#05252C" />
                                 </svg>
                             </a>
-                            <a href="tg://resolve?domain=@lang('contacts.telegram')" class="footer__contatcs-social-item">
+                            <a href="tg://resolve?domain=@lang('contacts.telegram')" class="footer__contatcs-social-item conversion">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
                                     fill="none">
                                     <path
@@ -44,7 +44,7 @@
                                 </svg>
                             </a>
                             <a href="viber://chat?number=%2B380{{ __('contacts.phone_link') }}"
-                                class="footer__contatcs-social-item">
+                                class="footer__contatcs-social-item conversion">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
                                     fill="none">
                                     <path
@@ -66,7 +66,7 @@
                             </a>
                         </div>
                         <div class="footer__contatcs-item footer__contatcs-email">
-                            <a href="mailto:@lang('contacts.email_link')">
+                            <a href="mailto:@lang('contacts.email_link')" class="conversion">
                                 <svg class="footer__contacts-icon" xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewBox="0 0 24 24" fill="none">
                                     <path
@@ -74,7 +74,7 @@
                                         fill="#FFFFFF" />
                                 </svg>
                             </a>
-                            <a href="mailto:@lang('contacts.email_link')">@lang('contacts.email')</a>
+                            <a href="mailto:@lang('contacts.email_link')" class="conversion">@lang('contacts.email')</a>
                         </div>
                         <div class="footer__contatcs-item footer__contatcs-address">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

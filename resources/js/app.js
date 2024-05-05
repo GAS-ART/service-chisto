@@ -2,7 +2,6 @@ import './bootstrap';
 import {popUp} from './modules/popup.js';
 import './modules/AsyncFormSending.js';
 import "./modules/swiper.js";
-
 //Set CSS variables
 const currentLang = document.documentElement.lang;
 const mainPageBanner = document.querySelector('.banner');
@@ -182,4 +181,11 @@ if(typeClientsTexts && window.innerWidth < 480){
             text.style.height = text.scrollHeight + 'px';
         });
     });
+}
+
+//GOOGL ADS CONVERSIONS
+
+const conversions = document.querySelectorAll('.conversion');
+if(conversions.length > 0){ 
+    conversions.forEach(conversion => conversion.addEventListener('click', () => gtag_report_conversion(location.href)));
 }

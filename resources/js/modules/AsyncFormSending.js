@@ -31,7 +31,7 @@ forms.forEach(form => {
         credentials: "same-origin",
       })
       if (response.ok) {
-        console.log(gtag_report_conversion)
+        gtag_report_conversion(location.href);
         loading.classList.remove('active');
         form.closest('.popup') ? form.closest('.popup').classList.add('sent') : null;
         nameError.innerText = '';

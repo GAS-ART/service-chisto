@@ -11,7 +11,7 @@ class sendController extends Controller {
     public function submit(sendRequest $req){
         $name = $req->input('name');
         $phone = $req->input('phone');
-        $service = $req->input('service ');
+        $service = $req->input('service');
         $page = $req->input('page ');
         /*ОТПРАВКА ДАННЫХ ИЗ ФОРМЫ И ФАЙЛА НА ПОЧТУ*/
         mail::send(['html' => 'mail'], ['name' => $name, 'phone' => $phone, 'service' => $service, 'page' => $page], function($message) {

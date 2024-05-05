@@ -11,7 +11,7 @@
                         </div>
                         <div class="header-contacts__body contact-header">
                             <div class="contact-header__row">
-                                <a class="contact-header__link-icon" href="tel:%2B0{{ __('contacts.phone_link') }}">
+                                <a class="contact-header__link-icon conversion" href="tel:%2B0{{ __('contacts.phone_link') }}">
                                     <svg class="contact-header__icon" xmlns="http://www.w3.org/2000/svg" width="18"
                                         height="18" viewBox="0 0 18 18" fill="none">
                                         <path
@@ -19,11 +19,11 @@
                                             fill="#FFCCBB" />
                                     </svg>
                                 </a>
-                                <a class="contact-header__link"
+                                <a class="contact-header__link conversion"
                                     href="tel:%2B0{{ __('contacts.phone_link') }}">@lang('contacts.phone')</a>
                             </div>
                             <div class="contact-header__row">
-                                <a class="contact-header__link-icon" href="mailto:@lang('contacts.email_link')">
+                                <a class="contact-header__link-icon conversion" href="mailto:@lang('contacts.email_link')">
                                     <svg class="contact-header__icon" xmlns="http://www.w3.org/2000/svg" width="24"
                                         height="24" viewBox="0 0 24 24" fill="none">
                                         <path
@@ -31,12 +31,12 @@
                                             fill="#FFCCBB" />
                                     </svg>
                                 </a>
-                                <a class="contact-header__link" href="mailto:@lang('contacts.email_link')">@lang('contacts.email')</a>
+                                <a class="contact-header__link conversion" href="mailto:@lang('contacts.email_link')">@lang('contacts.email')</a>
                             </div>
                             <div class="contact-header__row burger_icon"><span></span></div>
                         </div>
                         <div class="header-contacts__body social-header">
-                            <a class="social-header__link" href="@lang('contacts.instagram')">
+                            <a class="social-header__link conversion" href="@lang('contacts.instagram')">
                                 <svg class="social-header__icon" xmlns="http://www.w3.org/2000/svg" width="12"
                                     height="12" viewBox="0 0 12 12" fill="none">
                                     <g clip-path="url(#clip0_452_386)">
@@ -54,7 +54,7 @@
                                     </defs>
                                 </svg>
                             </a>
-                            <a class="social-header__link" class="social-header__link"
+                            <a class="social-header__link conversion" class="social-header__link"
                                 href="tg://resolve?domain=@lang('contacts.telegram')">
                                 <svg class="social-header__icon telegram" xmlns="http://www.w3.org/2000/svg" width="14"
                                     height="12" viewBox="0 0 14 12" fill="none">
@@ -62,7 +62,7 @@
                                         d="M9.93684 2.61543L3.99462 6.3336L1.79483 5.64938L12.0595 1.71951C12.1004 1.70447 12.1294 1.70052 12.1466 1.69997C12.1567 1.73121 12.1694 1.80443 12.1427 1.94673L12.1355 1.98032L10.3769 10.2211C10.3527 10.326 10.3248 10.3844 10.3065 10.4126C10.3064 10.4128 10.3063 10.413 10.3062 10.4132C10.2794 10.4084 10.232 10.3943 10.1625 10.358L7.50945 8.41503L7.17145 8.1675L6.86857 8.45696L5.95289 9.33206L6.05897 7.83999L10.8739 3.51658C10.8744 3.51613 10.8749 3.51567 10.8755 3.51521C10.962 3.43824 11.1127 3.27707 11.1216 3.03645C11.1334 2.71689 10.9031 2.53527 10.731 2.47435C10.5746 2.41902 10.4184 2.43103 10.3014 2.45749C10.1771 2.4856 10.053 2.53947 9.93684 2.61543ZM1.46184 5.82093C1.4618 5.82093 1.46226 5.82037 1.46331 5.81925C1.46241 5.82038 1.46188 5.82093 1.46184 5.82093Z" />
                                 </svg>
                             </a>
-                            <a class="social-header__link" href="viber://chat?number=%2B380{{ __('contacts.phone_link') }}">
+                            <a class="social-header__link conversion" href="viber://chat?number=%2B380{{ __('contacts.phone_link') }}">
                                 <svg class="social-header__icon" xmlns="http://www.w3.org/2000/svg" width="14"
                                     height="12" viewBox="0 0 14 12" fill="none">
                                     <path
