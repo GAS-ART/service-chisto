@@ -89,8 +89,7 @@ selects.forEach(select => {
 });
 
 //Showe-more-mobile, questions, stages
-window.onload = function () {
-
+window.onload = function () {``
     const styleTag = document.querySelector("head style");
     const caseItem = document.querySelector('.cases__item');
 

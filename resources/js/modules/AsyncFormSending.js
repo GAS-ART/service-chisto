@@ -18,7 +18,7 @@ forms.forEach(form => {
 
     const local = 'http://localhost:8000/send-main-form';
     const server = 'https://service-chisto.com.ua/send-main-form'
-
+    
     try {
       const response = await fetch(server, {
         headers: {
@@ -31,6 +31,7 @@ forms.forEach(form => {
         credentials: "same-origin",
       })
       if (response.ok) {
+        console.log(gtag_report_conversion)
         loading.classList.remove('active');
         form.closest('.popup').classList.add('sent');
         nameError.innerText = '';
