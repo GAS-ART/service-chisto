@@ -17,10 +17,10 @@ forms.forEach(form => {
     const formData = new FormData(form);
 
     const local = 'http://localhost:8000/send-main-form';
-    const server = 'https://eltop.artgas.pro/send-main-form'
+    const server = 'https://service-chisto.com.ua/send-main-form'
 
     try {
-      const response = await fetch(local, {
+      const response = await fetch(server, {
         headers: {
           "Accept": "application/json",
           "X-Requested-With": "XMLHttpRequest",
