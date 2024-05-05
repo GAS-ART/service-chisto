@@ -33,7 +33,7 @@ forms.forEach(form => {
       if (response.ok) {
         console.log(gtag_report_conversion)
         loading.classList.remove('active');
-        form.closest('.popup') ? form.closest.classList.add('sent') : null;
+        form.closest('.popup') ? form.closest('.popup').classList.add('sent') : null;
         nameError.innerText = '';
         nameError.classList.remove('error');
         nameError.previousElementSibling.classList.remove('error');
