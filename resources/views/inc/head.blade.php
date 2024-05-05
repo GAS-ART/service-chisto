@@ -18,10 +18,19 @@
         <meta property="og:title" content="@yield('ogTitle')" />
         <meta property="og:description" content="@yield('ogDescription')" />
         <meta property="og:site_name" content="service-chisto.com.ua" />
-        {{-- <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/> --}}
         <style>
         </style>
         @vite(['resources/scss/style.scss'])
 
-        {{-- Global site tag (gtag.js) - Google Analytics  --}}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16519033064">
+        </script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16519033064');
+        </script>
+
     </head>
