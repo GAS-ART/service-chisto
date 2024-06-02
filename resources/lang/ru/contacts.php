@@ -1,12 +1,12 @@
 <?php
 
 return [
-   'phone' => '+38 (063) 664 26 36',
-   'phone_link' => '636642636',
-   'email' => 'dnepr.jc@gmail.com',
-   'email_link' => 'dnepr.jc@gmail.com',
+   'phone' => '+38 (050) 487 77 74',
+   'phone_link' => '0504877774',
+   'email' => 'inegra7249725@gmail.com',
+   'email_link' => 'inegra7249725@gmail.com',
    'instagram' => 'https://www.instagram.com/klining.ua/',
-   'telegram' => 'Alexklining',
+   'telegram' => 'HelsingInt',
    'contact' => 'Днепр',
 ]
 
