@@ -20,7 +20,7 @@ class ExtremeCleaningController extends SetLangAndViewController
             'notice_text' => 'extreme-cleaning.fire.stages.notice.text',
             'content' => [],
         ];
-        for($i=1; $i<8; $i++){
+        for($i=1; $i<7; $i++){
             $stages['content']["stage_$i"] = ['img' => "img/extreme_cleaning/fire/stages/$i.webp",'title' => "extreme-cleaning.fire.stages.stage_$i.title", 'text' =>"extreme-cleaning.fire.stages.stage_$i.text"]; 
         }
 

@@ -5,7 +5,7 @@ return [
    'ru'=>'ru',
    'current'=>'ru',
    'another'=>'ua',
-   'ua_name' => 'Соловьиная',
+   'ua_name' => 'Солов\'їна',
    'ru_name' => 'другая',
 ]
 
