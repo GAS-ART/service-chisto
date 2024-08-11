@@ -23,33 +23,31 @@
         @vite(['resources/scss/style.scss'])
 
         <!-- Google tag (gtag.js) -->
-        {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16519033064"></script> --}}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16519033064">
+        </script>
         <script>
-            window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'AW-16519033064');
+        gtag('config', 'AW-16519033064');
         </script>
 
         <!-- Event snippet for Контакт conversion page
-                    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
         <script>
-            function gtag_report_conversion(url) {
-                var callback = function() {
-                    if (typeof(url) != 'undefined') {
-                        window.location = url;
-                    }
-                };
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-16519033064/XwTvCJPCrKwZEOjh8cQ9',
-                    'event_callback': callback
-                });
-                return false;
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
             }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16519033064/XwTvCJPCrKwZEOjh8cQ9',
+            'event_callback': callback
+        });
+        return false;
+        }
         </script>
 
 
