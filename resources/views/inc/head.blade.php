@@ -32,5 +32,14 @@
         gtag('config', 'AW-10998840814');
         </script>
 
+        <!-- Event snippet for Телефонний дзвінок conversion page -->
+        <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-10998840814/ivJSCIPAhr8aEO770_wo',
+            'value': 1.0,
+            'currency': 'UAH'
+        });
+        </script>
+
 
     </head>
