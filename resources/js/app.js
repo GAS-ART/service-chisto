@@ -187,5 +187,8 @@ if(typeClientsTexts && window.innerWidth < 480){
 
 const conversions = document.querySelectorAll('.conversion');
 if(conversions.length > 0){ 
-    conversions.forEach(conversion => conversion.addEventListener('click', () => gtag_report_conversion(undefined)));
+    conversions.forEach(conversion => conversion.addEventListener('click', () => {
+        console.log('CONVERSION');
+        
+        gtag_report_conversion(undefined)}));
 }
