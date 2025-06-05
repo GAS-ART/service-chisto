@@ -32,14 +32,25 @@
         gtag('config', 'AW-10998840814');
         </script>
 
-        <!-- Event snippet for Телефонний дзвінок conversion page -->
+       <!-- Event snippet for Телефонний дзвінок conversion page
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
         <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
         gtag('event', 'conversion', {
             'send_to': 'AW-10998840814/ivJSCIPAhr8aEO770_wo',
             'value': 1.0,
-            'currency': 'UAH'
+            'currency': 'UAH',
+            'event_callback': callback
         });
+        return false;
+        }
         </script>
+
 
 
     </head>
