@@ -11,7 +11,7 @@
                         </div>
                         <div class="header-contacts__body contact-header">
                             <div class="contact-header__row">
-                                <a class="contact-header__link-icon conversion" href="tel:%2B0{{ __('contacts.phone_link') }}">
+                                <a class="contact-header__link-icon conversion" href="tel:0{{ __('contacts.phone_link') }}">
                                     <svg class="contact-header__icon" xmlns="http://www.w3.org/2000/svg" width="18"
                                         height="18" viewBox="0 0 18 18" fill="none">
                                         <path
