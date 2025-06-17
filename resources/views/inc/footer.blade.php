@@ -18,7 +18,7 @@
                                         fill="#FFFFFF" />
                                 </svg>
                             </a>
-                            <a href="tel:%2B0{{ __('contacts.phone_link') }}" class="conversion">@lang('contacts.phone')</a>
+                            <a href="tel:0{{ __('contacts.phone_link') }}" class="conversion">@lang('contacts.phone')</a>
                         </div>
                         <div class="footer__contatcs-social">
                             <a href="@lang('contacts.instagram')" class="footer__contatcs-social-item conversion">

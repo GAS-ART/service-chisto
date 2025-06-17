@@ -20,7 +20,7 @@
                                     </svg>
                                 </a>
                                 <a class="contact-header__link conversion"
-                                    href="tel:%2B0{{ __('contacts.phone_link') }}">@lang('contacts.phone')</a>
+                                    href="tel:0{{ __('contacts.phone_link') }}">@lang('contacts.phone')</a>
                             </div>
                             <div class="contact-header__row">
                                 <a class="contact-header__link-icon conversion" href="mailto:@lang('contacts.email_link')">
